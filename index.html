@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#11100d" />
-    <meta name="description" content="JKM is a three-person Singapore digital studio building thoughtful brands, useful products, and dependable systems." />
+    <meta name="theme-color" content="#1B4D3E" />
+    <meta name="description" content="JKM is a three-person Singapore digital studio that ships real, named systems for real clients: a live geospatial home-buying product, a merchandise quoting engine, a hospitality brand, and the publishing platform that runs it." />
     <meta property="og:title" content="JKM — Ideas, made useful." />
-    <meta property="og:description" content="A three-person digital studio for ambitious brands, products, and systems." />
+    <meta property="og:description" content="A three-person Singapore digital studio. Four real, named builds. No theatre." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://moroha29.github.io/JKM/" />
     <meta property="og:image" content="https://moroha29.github.io/JKM/assets/og.png" />
@@ -15,318 +15,310 @@
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
     <script>document.documentElement.classList.add("js");</script>
     <title>JKM — Ideas, made useful.</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <div class="pointer-light" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="JKM, back to top">
-        <span class="brand__letters">JKM</span>
-        <span class="brand__descriptor">Digital studio<br />Singapore</span>
+        <span class="brand__plate">JKM</span>
       </a>
       <div class="availability" aria-label="Availability">
-        <span></span> Taking on select projects
+        <span class="availability__dot"></span> Taking on select projects
       </div>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span><i></i><i></i>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span>Directory</span><i></i><i></i>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="#work">Work</a>
         <a href="#studio">Studio</a>
         <a href="#people">People</a>
-        <a href="#contact">Contact</a>
+        <a class="site-nav__cta" href="mailto:junhong.tan@gmail.com">Email us</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero__meta" data-reveal>
-          <p>Independent digital studio</p>
-          <p>Strategy · Design · Engineering</p>
-        </div>
-
-        <div class="hero__heading" data-reveal>
-          <h1 id="hero-title">
-            We make ambitious<br />
-            <em>ideas</em> work.
+        <div class="hero__frame">
+          <p class="hero__meta">Independent digital studio &middot; Singapore</p>
+          <h1 id="hero-title" class="hero__headline">
+            <span class="hero__crop">REAL WORK.</span>
+            <span class="hero__line2">Real clients. No theatre.</span>
           </h1>
-          <p>JKM is a three-person studio turning complex ideas into clear products, expressive brands, and systems that keep working after launch.</p>
-        </div>
-
-        <div class="hero__bottom" data-reveal>
-          <a class="round-link" href="#work" aria-label="Explore selected work">
-            <span>View<br />our work</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0 6-6m-6 6-6-6" /></svg>
-          </a>
-          <div class="hero-mark" aria-hidden="true">
-            <span class="hero-mark__ring"></span>
-            <b>J</b><b>K</b><b>M</b>
-            <small>03 minds / 01 studio</small>
+          <p class="hero__sub">JKM is a three-person studio that ships the working system, a live product, a real client, a traceable result, before we ever ask you to trust a pitch deck.</p>
+          <div class="hero__actions">
+            <a class="cta cta--primary" href="mailto:junhong.tan@gmail.com">Email us <span aria-hidden="true">&rarr;</span></a>
+            <a class="cta cta--ghost" href="#work">See the directory</a>
           </div>
-          <p class="sg-time"><span>SGT</span><strong data-singapore-time>00:00</strong></p>
         </div>
+        <p class="hero__clock"><span>SGT</span><strong data-singapore-time>00:00</strong></p>
       </section>
 
-      <div class="ticker" aria-label="Our capabilities">
-        <div class="ticker__track">
-          <span>Brand direction</span><i>✦</i><span>Product design</span><i>✦</i><span>Creative development</span><i>✦</i><span>AI systems</span><i>✦</i><span>Digital operations</span><i>✦</i>
-          <span aria-hidden="true">Brand direction</span><i aria-hidden="true">✦</i><span aria-hidden="true">Product design</span><i aria-hidden="true">✦</i><span aria-hidden="true">Creative development</span><i aria-hidden="true">✦</i><span aria-hidden="true">AI systems</span><i aria-hidden="true">✦</i><span aria-hidden="true">Digital operations</span><i aria-hidden="true">✦</i>
-        </div>
-      </div>
+      <section class="directory-strip" aria-labelledby="directory-strip-title">
+        <h2 id="directory-strip-title" class="sr-only">The studio directory</h2>
+        <table class="directory-table">
+          <thead>
+            <tr>
+              <th scope="col">Unit</th>
+              <th scope="col">Client / build</th>
+              <th scope="col">System</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="directory-table__unit">01</td>
+              <td class="directory-table__name"><a href="#rexsg">RexSG</a></td>
+              <td class="directory-table__type">Product &middot; Geospatial &middot; PostGIS</td>
+              <td class="directory-table__status"><span class="status status--live">Live</span></td>
+            </tr>
+            <tr>
+              <td class="directory-table__unit">02</td>
+              <td class="directory-table__name"><a href="#moof">Moof</a></td>
+              <td class="directory-table__type">Brand &middot; Web &middot; Content system</td>
+              <td class="directory-table__status"><span class="status status--live">Live</span></td>
+            </tr>
+            <tr>
+              <td class="directory-table__unit">03</td>
+              <td class="directory-table__name"><a href="#mysos">mySOS</a></td>
+              <td class="directory-table__type">Platform &middot; Commerce &middot; Pricing logic</td>
+              <td class="directory-table__status"><span class="status status--live">Live</span></td>
+            </tr>
+            <tr>
+              <td class="directory-table__unit">04</td>
+              <td class="directory-table__name"><a href="#website-manager">Website Manager</a></td>
+              <td class="directory-table__type">Platform &middot; Workflow &middot; Operations</td>
+              <td class="directory-table__status"><span class="status status--private">Private</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-      <section class="manifesto section-pad" id="studio" aria-labelledby="manifesto-title">
-        <p class="section-label" data-reveal><span>01</span> Our point of view</p>
-        <div class="manifesto__copy">
-          <h2 id="manifesto-title" data-reveal>Good digital work should feel <em>obvious</em> when you use it—and anything but obvious when you look at what it took to make.</h2>
-          <div class="manifesto__aside" data-reveal>
-            <p>We work across the seams most teams split apart: the idea and its interface, the interface and its code, the launch and everything that happens next.</p>
-            <p>Small by design. Senior by default. Close enough to the work to care about every decision.</p>
-          </div>
+      <section class="manifesto" id="studio" aria-labelledby="manifesto-title">
+        <h2 id="manifesto-title">Good digital work should feel <em>obvious</em> when you use it, and anything but obvious when you look at what it took to make.</h2>
+        <div class="manifesto__aside">
+          <p>We work across the seams most teams split apart: the idea and its interface, the interface and its code, the launch and everything that happens after.</p>
+          <p>Small by design. Senior by default. Close enough to the work to sign our name to it.</p>
         </div>
       </section>
 
       <section class="work" id="work" aria-labelledby="work-title">
-        <header class="section-head section-pad">
-          <p class="section-label" data-reveal><span>02</span> Selected work</p>
-          <h2 id="work-title" data-reveal>Three builds.<br /><em>One standard.</em></h2>
-          <p data-reveal>Real products across AI, hospitality, and publishing operations.</p>
+        <header class="work__head">
+          <h2 id="work-title">The directory.</h2>
+          <p>Four real, named builds. Every claim below traces to a live link, or is labelled otherwise.</p>
         </header>
 
-        <article class="case case--homeos" id="homeos">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">01 / 03</p>
-              <p class="case__type">Product · AI · Geospatial</p>
+        <article class="case case--rexsg" id="rexsg" data-reveal>
+          <div class="case__header">
+            <p class="case__unit">Unit 01</p>
+            <div class="case__title">
+              <h3>RexSG</h3>
+              <p class="case__type">Product &middot; Geospatial &middot; PostGIS</p>
             </div>
-            <h3>HomeOS</h3>
-            <p class="case__lede">Making one of life’s biggest decisions feel less like guesswork.</p>
+            <p class="case__tagline">HDB Match: a live map for one of Singapore's biggest decisions.</p>
           </div>
-          <figure class="case__visual case__visual--screen" data-tilt data-reveal>
-            <div class="browser-chrome"><span></span><span></span><span></span><p>HomeOS / decision workspace</p></div>
-            <img src="./assets/projects/tbp-live.png" alt="HomeOS interface showing an HDB home preference setup over a Singapore map" width="1440" height="960" />
-            <figcaption>Production interface captured from the project build.</figcaption>
+          <figure class="case__visual">
+            <img src="./assets/projects/rexsg-live.png" alt="RexSG live map interface showing HDB resale listings across Singapore with price and match filters" loading="lazy" width="2000" height="1015" />
+            <figcaption>Captured from the live product, September 2026.</figcaption>
           </figure>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Turn fragmented housing data into a decision people can understand and defend.</h4>
+          <div class="case__facts">
+            <div class="fact"><dt class="fact__number">3</dt><dd class="fact__label">property modes (resale, BTO, private)</dd></div>
+            <div class="fact"><dt class="fact__number">4</dt><dd class="fact__label">weighted match factors</dd></div>
+            <div class="fact"><dt class="fact__number">1</dt><dd class="fact__label">live product at rexsg.com</dd></div>
+          </div>
+          <dl class="case__plate">
+            <div class="case__plate-row"><dt>Brief</dt><dd>Turn fragmented housing data into a decision people can understand and defend.</dd></div>
+            <div class="case__plate-row"><dt>Move</dt><dd>We didn't ask buyers to trust a black-box score. Drag the weight between commute, lifestyle, value, and lease, and the shortlist reorders live, on the same PostGIS-backed data underneath the whole time, so the trade-off is felt, not just reported.</dd></div>
+          </dl>
+          <details class="case__story">
+            <summary><span>Read the build story</span><i aria-hidden="true"></i></summary>
+            <div class="case__story-grid">
+              <section><p class="case__story-label">Challenge</p><h4>Property search shows inventory. Buyers need judgement.</h4><p>Price, lease, schools, transit, household needs, and future risk sit across different sources. Comparing them by hand is slow and hard to defend to a spouse, a parent, or a bank.</p></section>
+              <section><p class="case__story-label">Approach</p><h4>One map, weights the buyer controls.</h4><p>A deterministic geospatial engine (resale medians, accessibility scoring, commute and appreciation models) sits under a live map. The buyer sets what matters; the map re-sorts in front of them.</p></section>
+              <section><p class="case__story-label">Outcome</p><h4>A live, public product, not a prototype.</h4><p>Real resale listings, real filters, and a shortlist a buyer can defend, because every number traces back to the same evidence underneath.</p></section>
             </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>specialist AI agents</dd></dl>
-              <dl><dt>3</dt><dd>property modes</dd></dl>
-              <dl><dt>1</dt><dd>traceable evidence path</dd></dl>
-            </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We put deterministic geospatial services underneath the AI. Agents can choose tools and explain the shortlist, but every cited number still traces back to reproducible PostGIS-backed evidence.</p>
-            </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>Property search shows inventory. Buyers need judgement.</h5><p>Price, lease, schools, transit, household needs, and future risk sit across different sources. Comparing them manually is slow and hard to explain.</p></section>
-                <section><p>Approach</p><h5>One map, two ways to think.</h5><p>Explore mode gives hands-on control. HomeOS turns a natural-language household brief into a live multi-agent investigation, then lets the buyer question and refine the result.</p></section>
-                <section><p>Outcome</p><h5>A shortlist with reasons, not a black-box score.</h5><p>Typed agent outputs, streaming progress, live resale data, commute analysis, accessibility scoring, and a provider-agnostic model layer make the product both ambitious and testable.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://github.com/kingsmil/TBP" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>FastAPI · React · PostGIS · Pydantic AI</p>
-            </div>
+          </details>
+          <div class="case__links">
+            <a class="case__link" href="https://www.rexsg.com" target="_blank" rel="noreferrer">Visit rexsg.com <span aria-hidden="true">&#8599;</span></a>
+            <p class="case__stack">FastAPI &middot; React &middot; PostGIS &middot; Leaflet</p>
           </div>
         </article>
 
-        <article class="case case--moof" id="moof">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">02 / 03</p>
-              <p class="case__type">Brand · Web · Content system</p>
+        <article class="case case--moof" id="moof" data-reveal>
+          <div class="case__header">
+            <p class="case__unit">Unit 02</p>
+            <div class="case__title">
+              <h3>Moof</h3>
+              <p class="case__type">Brand &middot; Web &middot; Content system</p>
             </div>
-            <h3>Moof</h3>
-            <p class="case__lede">Giving a small matcha bar a digital presence with room to become itself.</p>
+            <p class="case__tagline">An editorial site and content system for a Shenton Way matcha bar.</p>
           </div>
-          <div class="moof-gallery" data-reveal>
-            <figure class="moof-gallery__lead" data-tilt>
-              <img src="./assets/projects/moof-live.png" alt="Moof editorial website with large serif typography and café photography" width="1440" height="960" />
-            </figure>
-            <figure><img src="./assets/projects/moof-strawberry.jpg" alt="A strawberry matcha drink from Moof" loading="lazy" /></figure>
-            <figure><img src="./assets/projects/moof-menu.jpg" alt="Moof menu and matcha tools on the counter" loading="lazy" /></figure>
-            <p class="vertical-note">Matcha &amp; hojicha · Shenton Way</p>
+          <figure class="case__visual">
+            <img src="./assets/projects/moof-live.jpg" alt="Moof homepage with large display type reading &ldquo;Whisked the bright way&rdquo; over caf&eacute; counter photography" loading="lazy" width="1311" height="924" />
+            <figcaption>Captured from the live site, September 2026.</figcaption>
+          </figure>
+          <div class="case__facts">
+            <div class="fact"><dt class="fact__number">5</dt><dd class="fact__label">complete design directions built</dd></div>
+            <div class="fact"><dt class="fact__number">1</dt><dd class="fact__label">shared publishing model</dd></div>
+            <div class="fact"><dt class="fact__number">0</dt><dd class="fact__label">runtime framework overhead</dd></div>
           </div>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Build a distinctive hospitality site without locking a young brand into one expression.</h4>
+          <dl class="case__plate">
+            <div class="case__plate-row"><dt>Brief</dt><dd>Build a distinctive hospitality site without locking a young brand into one expression.</dd></div>
+            <div class="case__plate-row"><dt>Move</dt><dd>Instead of polishing one safe concept, we built five complete directions against the same real content and photography. That made taste discussable with the owners, and left a system flexible enough to evolve without rebuilding the brand from zero.</dd></div>
+          </dl>
+          <details class="case__story">
+            <summary><span>Read the build story</span><i aria-hidden="true"></i></summary>
+            <div class="case__story-grid">
+              <section><p class="case__story-label">Challenge</p><h4>New brands need conviction and optionality at the same time.</h4><p>The site had to feel considered, local, and tactile, while keeping menus, hours, and photography straightforward for a small team to update themselves.</p></section>
+              <section><p class="case__story-label">Approach</p><h4>Editorial restraint over caf&eacute; clich&eacute;s.</h4><p>Large type, real counter photography, warm negative space, and a deliberately small map of pages let the atmosphere do the selling.</p></section>
+              <section><p class="case__story-label">Outcome</p><h4>One content model, five finished directions.</h4><p>The chosen direction ships as a fast static build; the other four remain real evidence of range, not throwaway sketches.</p></section>
             </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>design directions built</dd></dl>
-              <dl><dt>1</dt><dd>shared publishing model</dd></dl>
-              <dl><dt>0</dt><dd>runtime framework overhead</dd></dl>
+          </details>
+          <div class="case__links">
+            <a class="case__link" href="https://moroha29.github.io/moof-website/" target="_blank" rel="noreferrer">Visit moof's site <span aria-hidden="true">&#8599;</span></a>
+            <p class="case__stack">Astro &middot; Structured content &middot; Art direction</p>
+          </div>
+          <p class="case__credit">Project photography: Zawani Abdul Ghani / HungryGoWhere.</p>
+        </article>
+
+        <article class="case case--mysos" id="mysos" data-reveal>
+          <div class="case__header">
+            <p class="case__unit">Unit 03</p>
+            <div class="case__title">
+              <h3>mySOS</h3>
+              <p class="case__type">Platform &middot; Commerce &middot; Pricing logic</p>
             </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>Instead of polishing one safe concept, we built multiple complete directions against the same real content. That made taste discussable—and made the final system flexible enough to evolve without rebuilding the brand from scratch.</p>
+            <p class="case__tagline">One catalogue running a public storefront and an internal quoting engine.</p>
+          </div>
+          <figure class="case__visual">
+            <img src="./assets/projects/mysos-live.jpg" alt="MySOS public website homepage for custom merchandise sourcing and printing" loading="lazy" width="1568" height="774" />
+            <figcaption>Captured from the live product, September 2026.</figcaption>
+          </figure>
+          <div class="case__facts">
+            <div class="fact"><dt class="fact__number">2</dt><dd class="fact__label">systems sharing one dataset</dd></div>
+            <div class="fact"><dt class="fact__number">4</dt><dd class="fact__label">printing methods: DTF/DTG, silkscreen, embroidery, sublimation</dd></div>
+            <div class="fact"><dt class="fact__number">1</dt><dd class="fact__label">public price never equals internal cost</dd></div>
+          </div>
+          <dl class="case__plate">
+            <div class="case__plate-row"><dt>Brief</dt><dd>Give a sales team a quoting tool fast enough for a live call, without the public site and the sales floor ever showing the same number.</dd></div>
+            <div class="case__plate-row"><dt>Move</dt><dd>We kept the public &ldquo;from&rdquo; price and the internal quotation cost as two separate fields on the same product record. A salesperson can quote fast and correctly; the public catalogue never has to leak, or lie about, a real cost.</dd></div>
+          </dl>
+          <details class="case__story">
+            <summary><span>Read the build story</span><i aria-hidden="true"></i></summary>
+            <div class="case__story-grid">
+              <section><p class="case__story-label">Challenge</p><h4>One catalogue, two audiences with opposite needs.</h4><p>Customers need a simple public price. An internal sales team needs exact costs, printing methods, tiered quantities, and margin, for the same products.</p></section>
+              <section><p class="case__story-label">Approach</p><h4>One schema, two views of it.</h4><p>Every product carries a public display price and a private quotation cost as distinct fields, with printing methods, add-ons, and quantity tiers modelled as their own pure pricing logic.</p></section>
+              <section><p class="case__story-label">Outcome</p><h4>A public storefront and a live quoting tool, from one source of truth.</h4><p>Change a cost once and both the public catalogue and the sales team's quotes stay correct, and never accidentally swap places.</p></section>
             </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>New brands need conviction and optionality at the same time.</h5><p>The experience had to feel considered, local, and tactile while keeping menus, imagery, hours, and story content straightforward to update.</p></section>
-                <section><p>Approach</p><h5>Editorial restraint over café clichés.</h5><p>Large type, real counter photography, warm negative space, and a deliberately small information architecture let the atmosphere do the selling.</p></section>
-                <section><p>Outcome</p><h5>A fast static experience backed by structured content.</h5><p>Five Astro concepts explore distinct art directions while sharing the operational thinking that later powers visual publishing through Website Manager.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://moroha29.github.io/moof-website/e/" target="_blank" rel="noreferrer">Visit live direction <span>↗</span></a>
-              <a href="https://github.com/moroha29/moof-website" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>Astro · Content architecture · Art direction</p>
-            </div>
-            <p class="photo-credit">Project photography: Zawani Abdul Ghani / HungryGoWhere.</p>
+          </details>
+          <div class="case__links">
+            <a class="case__link" href="https://moroha29.github.io/mySOS/" target="_blank" rel="noreferrer">Visit moroha29.github.io/mySOS <span aria-hidden="true">&#8599;</span></a>
+            <p class="case__stack">React &middot; Vite &middot; Structured product data</p>
           </div>
         </article>
 
-        <article class="case case--manager" id="manager">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">03 / 03</p>
-              <p class="case__type">Platform · Workflow · Operations</p>
+        <article class="case case--manager" id="website-manager" data-reveal>
+          <div class="case__header">
+            <p class="case__unit">Unit 04</p>
+            <div class="case__title">
+              <h3>Website Manager</h3>
+              <p class="case__type">Platform &middot; Workflow &middot; Operations</p>
             </div>
-            <h3>Website Manager</h3>
-            <p class="case__lede">Making publishing feel safe enough to hand over—and powerful enough to keep.</p>
+            <p class="case__tagline">Making publishing feel safe enough to hand over, and powerful enough to keep.</p>
           </div>
-          <figure class="manager-frame" data-tilt data-reveal>
+          <figure class="case__visual case__visual--reconstruction">
             <div class="manager-ui">
               <header><b>moof / manager</b><span>All systems normal</span><i>JK</i></header>
               <aside>
                 <p>Websites</p>
-                <a class="active"><span>E</span><b>Editorial</b><i></i></a>
-                <a><span>A</span><b>Original</b><i></i></a>
-                <a><span>B</span><b>Minimal</b><i></i></a>
-                <a><span>C</span><b>Playful</b><i></i></a>
-                <a><span>D</span><b>Contrast</b><i></i></a>
-                <small>+ Publishing history</small>
-                <small>+ People &amp; access</small>
+                <a class="active"><span>E</span><b>Editorial</b></a>
+                <a><span>A</span><b>Original</b></a>
+                <a><span>B</span><b>Minimal</b></a>
               </aside>
               <main>
                 <div class="manager-ui__toolbar"><p><b>Homepage</b><span>Draft saved just now</span></p><button>Review &amp; publish</button></div>
                 <div class="manager-ui__preview">
-                  <img src="./assets/projects/moof-drinks.jpg" alt="" />
-                  <div><small>SHENTON WAY · SINGAPORE</small><strong>Matcha and hojicha,<br />made slowly.</strong></div>
-                  <button>Selected: headline</button>
+                  <div><small>SHENTON WAY &middot; SINGAPORE</small><strong>Matcha and hojicha,<br />made slowly.</strong></div>
                 </div>
               </main>
               <section>
                 <p>Selected block</p>
                 <label>Headline<textarea readonly>Matcha and hojicha, made slowly.</textarea></label>
-                <label>Font colour<span class="color-input">#2D211C<i></i></span></label>
-                <label>Size<span class="range"><i></i></span></label>
                 <div class="manager-ui__status"><i></i><p><b>1 change ready</b><span>Exact revision protected</span></p></div>
               </section>
             </div>
-            <figcaption>Interface reconstruction based on the production workflow.</figcaption>
+            <figcaption>Interface reconstruction: production screens are authenticated and not publicly viewable.</figcaption>
           </figure>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Let non-developers update live sites without turning deployment into a leap of faith.</h4>
+          <div class="case__facts">
+            <div class="fact"><dt class="fact__number">5</dt><dd class="fact__label">managed site directions</dd></div>
+            <div class="fact"><dt class="fact__number">2&times;</dt><dd class="fact__label">before / after review on every change</dd></div>
+            <div class="fact"><dt class="fact__number">24/7</dt><dd class="fact__label">resumable publish queue</dd></div>
+          </div>
+          <dl class="case__plate">
+            <div class="case__plate-row"><dt>Brief</dt><dd>Let non-developers update live sites without turning deployment into a leap of faith.</dd></div>
+            <div class="case__plate-row"><dt>Move</dt><dd>We treated publishing as a durable, reviewable job, not a button that fires and hopes. Every change maps to real content, every release shows its exact before-and-after, and every deployment can resume after an interruption.</dd></div>
+          </dl>
+          <details class="case__story">
+            <summary><span>Read the build story</span><i aria-hidden="true"></i></summary>
+            <div class="case__story-grid">
+              <section><p class="case__story-label">Challenge</p><h4>Visual editing is easy. Trustworthy publishing is not.</h4><p>Repeated text, simultaneous editors, image ownership, and failed deployments all create ways for a &ldquo;simple CMS&rdquo; to quietly publish the wrong thing.</p></section>
+              <section><p class="case__story-label">Approach</p><h4>Make state and consequence visible.</h4><p>Sandboxed previews bind rendered blocks to canonical content paths. Immutable drafts, field-level merges, role-based access, and pull requests protect the path to production.</p></section>
+              <section><p class="case__story-label">Outcome</p><h4>A compact operations layer with serious foundations.</h4><p>Encrypted recovery, audit history, deployment health, and retries live behind an interface built for everyday, non-technical use.</p></section>
             </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>managed site directions</dd></dl>
-              <dl><dt>2×</dt><dd>before / after review</dd></dl>
-              <dl><dt>24/7</dt><dd>resumable publish queue</dd></dl>
-            </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We treated publishing as a durable, reviewable job—not a button that fires and hopes. Every change maps to real content, every release shows its exact before-and-after, and every deployment can resume after interruption.</p>
-            </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>Visual editing is easy. Trustworthy publishing is not.</h5><p>Repeated text, simultaneous editors, scheduled releases, image ownership, and failed deployments all create ways for a “simple CMS” to quietly publish the wrong thing.</p></section>
-                <section><p>Approach</p><h5>Make state and consequence visible.</h5><p>Sandboxed previews bind rendered blocks to canonical JSON paths. Immutable drafts, field-level merges, role-based access, and GitHub pull requests protect the path to production.</p></section>
-                <section><p>Outcome</p><h5>A compact operations layer with serious foundations.</h5><p>Encrypted recovery, audit history, notification linking, deployment health, retries, and production-ready OVH orchestration live behind an interface built for everyday use.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://github.com/moroha29/website-manager" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>Node.js · SQLite · GitHub Apps · Docker</p>
-            </div>
+          </details>
+          <div class="case__links">
+            <p class="case__repo-note">A private, client-only system, not publicly viewable.</p>
+            <p class="case__stack">Node.js &middot; SQLite &middot; Docker</p>
           </div>
         </article>
       </section>
 
-      <section class="why section-pad" aria-labelledby="why-title">
-        <p class="section-label" data-reveal><span>03</span> Why JKM</p>
-        <div class="why__head">
-          <h2 id="why-title" data-reveal>Less handoff.<br /><em>More ownership.</em></h2>
-          <p data-reveal>You work with the people making the decisions—and those same people stay close from first sketch to production.</p>
-        </div>
+      <section class="why" id="why" aria-labelledby="why-title">
+        <h2 id="why-title">Less handoff. <em>More ownership.</em></h2>
+        <p class="why__sub">You work with the people making the decisions, and those same people stay close from first sketch to production.</p>
         <ol class="why__list">
-          <li data-reveal><span>01</span><h3>Three minds, one room.</h3><p>Strategy, design, and engineering develop together, so good ideas survive implementation.</p></li>
-          <li data-reveal><span>02</span><h3>Proof before theatre.</h3><p>We test the difficult assumptions early and show working evidence, not a deck full of promises.</p></li>
-          <li data-reveal><span>03</span><h3>We own the boring parts.</h3><p>Security, content models, recovery, deployment, and accessibility are part of the product—not someone else’s problem.</p></li>
-          <li data-reveal><span>04</span><h3>Built to keep moving.</h3><p>We favour clear systems your team can operate, extend, and move between platforms.</p></li>
+          <li><h3>Three minds, one room.</h3><p>Strategy, design, and engineering develop together, so good ideas survive implementation.</p></li>
+          <li><h3>Proof before theatre.</h3><p>We'd rather hand you a working link than a deck. In August 2026 alone we shipped complete concept builds for a dozen Singapore businesses before any of them said yes.</p></li>
+          <li><h3>We own the boring parts.</h3><p>Security, content models, recovery, deployment, and accessibility are part of the product, not someone else's problem.</p></li>
+          <li><h3>Built to keep moving.</h3><p>We favour clear systems your team can operate, extend, and move between platforms.</p></li>
         </ol>
       </section>
 
       <section class="capabilities" aria-labelledby="capabilities-title">
-        <div class="capabilities__intro section-pad">
-          <p class="section-label" data-reveal><span>04</span> What we do</p>
-          <h2 id="capabilities-title" data-reveal>From the first <em>why</em><br />to the last mile.</h2>
-        </div>
-        <div class="capabilities__grid">
-          <article data-reveal><span>01</span><h3>Shape</h3><p>Product strategy<br />Research synthesis<br />Experience definition<br />Technical direction</p></article>
-          <article data-reveal><span>02</span><h3>Express</h3><p>Brand systems<br />Art direction<br />Interface design<br />Content architecture</p></article>
-          <article data-reveal><span>03</span><h3>Build</h3><p>Web applications<br />AI experiences<br />Data platforms<br />Creative development</p></article>
-          <article data-reveal><span>04</span><h3>Run</h3><p>Cloud deployment<br />Publishing systems<br />Performance &amp; access<br />Operational tooling</p></article>
+        <h2 id="capabilities-title">From the first <em>why</em> to the last mile.</h2>
+        <div class="capabilities__list">
+          <div class="capability"><span class="capability__level">Level 1</span><h3>Shape</h3><p>Product strategy, research synthesis, experience definition, technical direction.</p></div>
+          <div class="capability"><span class="capability__level">Level 2</span><h3>Express</h3><p>Brand systems, art direction, interface design, content architecture.</p></div>
+          <div class="capability"><span class="capability__level">Level 3</span><h3>Build</h3><p>Web applications, AI experiences, data platforms, creative development.</p></div>
+          <div class="capability"><span class="capability__level">Level 4</span><h3>Run</h3><p>Cloud deployment, publishing systems, performance &amp; access, operational tooling.</p></div>
         </div>
       </section>
 
-      <section class="people section-pad" id="people" aria-labelledby="people-title">
-        <p class="section-label" data-reveal><span>05</span> The three behind JKM</p>
-        <header class="people__head">
-          <h2 id="people-title" data-reveal>Small enough to know<br /><em>who did the work.</em></h2>
-          <p data-reveal>The founders’ names, roles, portraits, and individual stories will be added here when they are ready.</p>
-        </header>
+      <section class="people" id="people" aria-labelledby="people-title">
+        <h2 id="people-title">Small enough to know <em>who did the work.</em></h2>
+        <p class="people__sub">The founders' names, roles, and portraits will be engraved here when they're ready.</p>
         <div class="people__grid">
-          <article class="person" data-reveal>
-            <div class="person__portrait person__portrait--one" aria-hidden="true"><span>J</span><i></i></div>
-            <p>Creator 01</p><h3>Name to be added</h3><span>Role / discipline to be added</span>
-          </article>
-          <article class="person" data-reveal>
-            <div class="person__portrait person__portrait--two" aria-hidden="true"><span>K</span><i></i></div>
-            <p>Creator 02</p><h3>Name to be added</h3><span>Role / discipline to be added</span>
-          </article>
-          <article class="person" data-reveal>
-            <div class="person__portrait person__portrait--three" aria-hidden="true"><span>M</span><i></i></div>
-            <p>Creator 03</p><h3>Name to be added</h3><span>Role / discipline to be added</span>
-          </article>
+          <article class="person"><div class="person__plate"><span>01</span></div><p>Nameplate reserved</p></article>
+          <article class="person"><div class="person__plate"><span>02</span></div><p>Nameplate reserved</p></article>
+          <article class="person"><div class="person__plate"><span>03</span></div><p>Nameplate reserved</p></article>
         </div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact__top section-pad">
-          <p class="section-label" data-reveal><span>06</span> Start something</p>
-          <p class="contact__note" data-reveal>Have a difficult idea, a product that needs clarity, or a system that has outgrown its first version?</p>
-        </div>
-        <div class="contact__cta section-pad" data-reveal>
-          <h2 id="contact-title">Let’s make it<br /><em>useful.</em></h2>
-          <a href="https://github.com/moroha29" target="_blank" rel="noreferrer">
-            <span>Find JKM on GitHub</span><i>↗</i>
-          </a>
-        </div>
-        <p class="contact__placeholder section-pad">Direct project email and social links will be added with the founders’ profiles.</p>
+        <h2 id="contact-title">Let's make it <em>useful.</em></h2>
+        <p>Have a difficult idea, a product that needs clarity, or a system that has outgrown its first version?</p>
+        <a class="cta cta--primary cta--large" href="mailto:junhong.tan@gmail.com">Email us <span aria-hidden="true">&rarr;</span></a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand--footer" href="#top"><span class="brand__letters">JKM</span><span class="brand__descriptor">Ideas,<br />made useful.</span></a>
-      <p>Independent digital studio<br />Singapore · <span data-year>2026</span></p>
-      <div><a href="#work">Work</a><a href="#people">People</a><a href="#top">Back to top ↑</a></div>
+      <a class="brand brand--footer" href="#top"><span class="brand__plate">JKM</span></a>
+      <p>Independent digital studio &middot; Singapore &middot; <span data-year>2026</span></p>
+      <div class="site-footer__links"><a href="#work">Work</a><a href="#people">People</a><a href="#top">Back to top &uarr;</a></div>
     </footer>
 
     <script src="./script.js" defer></script>

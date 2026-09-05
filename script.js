@@ -1,76 +1,48 @@
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector(".site-nav");
-
-menuButton?.addEventListener("click", () => {
-  const open = menuButton.getAttribute("aria-expanded") !== "true";
-  menuButton.setAttribute("aria-expanded", String(open));
-  navigation?.classList.toggle("is-open", open);
-});
-
-navigation?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuButton?.setAttribute("aria-expanded", "false");
-    navigation.classList.remove("is-open");
-  });
-});
-
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const revealItems = document.querySelectorAll("[data-reveal]");
-
-if (reducedMotion || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
+(function () {
+  var toggle = document.querySelector("[data-menu-toggle]");
+  var nav = document.getElementById("site-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      nav.classList.toggle("is-open", !open);
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -5%" });
-  revealItems.forEach((item) => revealObserver.observe(item));
-}
+  }
 
-const progress = document.querySelector(".scroll-progress span");
-const pointerLight = document.querySelector(".pointer-light");
+  var yearEl = document.querySelector("[data-year]");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-function updateScrollProgress() {
-  const distance = document.documentElement.scrollHeight - window.innerHeight;
-  const ratio = distance > 0 ? window.scrollY / distance : 0;
-  if (progress) progress.style.width = `${Math.min(1, Math.max(0, ratio)) * 100}%`;
-}
-
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-updateScrollProgress();
-
-if (!reducedMotion && pointerLight) {
-  window.addEventListener("pointermove", (event) => {
-    pointerLight.style.left = `${event.clientX}px`;
-    pointerLight.style.top = `${event.clientY}px`;
-  }, { passive: true });
-
-  document.querySelectorAll("[data-tilt]").forEach((surface) => {
-    surface.addEventListener("pointermove", (event) => {
-      if (window.innerWidth < 900) return;
-      const rect = surface.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      surface.style.transform = `perspective(1400px) rotateX(${y * -1.2}deg) rotateY(${x * 1.2}deg)`;
+  function paintSingaporeTime() {
+    var el = document.querySelector("[data-singapore-time]");
+    if (!el) return;
+    var formatter = new Intl.DateTimeFormat("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Asia/Singapore",
     });
-    surface.addEventListener("pointerleave", () => { surface.style.transform = ""; });
-  });
-}
+    el.textContent = formatter.format(new Date());
+  }
+  paintSingaporeTime();
+  setInterval(paintSingaporeTime, 30000);
 
-function updateSingaporeTime() {
-  const target = document.querySelector("[data-singapore-time]");
-  if (!target) return;
-  target.textContent = new Intl.DateTimeFormat("en-SG", {
-    timeZone: "Asia/Singapore",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date());
-}
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-updateSingaporeTime();
-setInterval(updateSingaporeTime, 30_000);
-document.querySelectorAll("[data-year]").forEach((item) => { item.textContent = String(new Date().getFullYear()); });
+  var revealEls = document.querySelectorAll("[data-reveal]");
+  if (!reduceMotion && "IntersectionObserver" in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px -10% 0px" }
+    );
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-in"); });
+  }
+})();
