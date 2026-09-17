@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11100d" />
+    <meta name="description" content="JKM is a three-person Singapore digital studio building thoughtful brands, useful products, and dependable systems." />
+    <meta property="og:title" content="JKM — Ideas, made useful." />
+    <meta property="og:description" content="A three-person digital studio for ambitious brands, products, and systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moroha29.github.io/JKM/projects/manager.html" />
+    <meta property="og:image" content="https://moroha29.github.io/JKM/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://moroha29.github.io/JKM/projects/manager.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <title>Website Manager — JKM</title>
+  </head>
+  <body class="project-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="pointer-light" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="../index.html#top" aria-label="JKM, back to top">
+        <span class="brand__letters monogram" aria-hidden="true"><span>J</span><span>K</span><span>M</span></span>
+        <span class="brand__descriptor">Digital studio<br />Singapore</span>
+      </a>
+      <div class="availability" aria-label="Availability">
+        <span></span> Taking on select projects
+      </div>
+
+
+    </header>
+
+    <main id="main">
+        <article class="case case--manager" id="manager">
+          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work">← All work</a><div><a href="./homeos.html">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html">MySOS</a><a href="./manager.html" aria-current="page">Website Manager</a></div></nav>
+          <div class="case__intro section-pad" data-reveal>
+            <div>
+              <p class="case__number">04 / 04</p>
+              <p class="case__type">Platform · Workflow · Operations</p>
+            </div>
+            <h1>Website Manager</h1>
+            <p class="case__lede">Making publishing feel safe enough to hand over—and powerful enough to keep.</p>
+          </div>
+          <figure class="manager-frame" data-tilt data-reveal>
+            <div class="manager-ui" inert>
+              <header><b>website manager</b><span>All systems normal</span><i>JK</i></header>
+              <aside>
+                <p>Websites</p>
+                <a class="active"><span>M</span><b>Moof</b><i></i></a>
+                <a><span>S</span><b>mySOS</b><i></i></a>
+                <small>+ Scheduled releases</small>
+                <small>+ Published history</small>
+                <small>+ People &amp; access</small>
+              </aside>
+              <main>
+                <div class="manager-ui__toolbar"><p><b>Moof · Homepage</b><span>Draft saved just now</span></p><button>Review &amp; publish</button></div>
+                <div class="manager-ui__preview">
+                  <img src="../assets/projects/moof-photo.jpg" alt="" />
+                  <div><small>SPECIALTY MATCHA &amp; HOJICHA</small><strong>Whisked the<br />bright way.</strong></div>
+                  <button>Selected: headline</button>
+                </div>
+              </main>
+              <section>
+                <p>Selected block</p>
+                <label>Headline<textarea readonly>Whisked the bright way.</textarea></label>
+                <label>Hero picture<span class="color-input color-input--image">moof-hero.png<i></i></span></label>
+                <label>Size<span class="range"><i></i></span></label>
+                <div class="manager-ui__status"><i></i><p><b>1 change ready</b><span>Exact revision protected</span></p></div>
+              </section>
+            </div>
+            <figcaption>Interface reconstruction based on the production workflow.</figcaption>
+          </figure>
+          <div class="case__story section-pad">
+            <div class="case__statement" data-reveal>
+              <p>The brief</p>
+              <h4>Let non-developers update live sites without turning deployment into a leap of faith.</h4>
+            </div>
+            <div class="case__facts" data-reveal>
+              <dl><dt>2</dt><dd>live client sites managed</dd></dl>
+              <dl><dt>2×</dt><dd>before / after review</dd></dl>
+              <dl><dt>24/7</dt><dd>resumable publish queue</dd></dl>
+            </div>
+            <div class="case__decision" data-reveal>
+              <p class="eyebrow">The decisive move</p>
+              <p>We treated publishing as a durable, reviewable job—not a button that fires and hopes. Every change maps to real content, every release shows its exact before-and-after, and every deployment can resume after interruption.</p>
+            </div>
+            <details class="case__details" data-reveal>
+              <summary><span>Read the build story</span><i></i></summary>
+              <div>
+                <section><p>Challenge</p><h5>Visual editing is easy. Trustworthy publishing is not.</h5><p>Repeated text, simultaneous editors, scheduled releases, image ownership, and failed deployments all create ways for a “simple CMS” to quietly publish the wrong thing.</p></section>
+                <section><p>Approach</p><h5>Make state and consequence visible.</h5><p>Live previews of Moof and mySOS bind rendered blocks to their real content fields. Immutable drafts, field-level merges, per-site access, and GitHub pull requests protect the path to production.</p></section>
+                <section><p>Outcome</p><h5>A compact operations layer with serious foundations.</h5><p>Scheduled releases, audit history, email and Telegram alerts, deployment health checks, and automatic retries run in Docker on AWS Lightsail, behind an interface built for everyday use.</p></section>
+              </div>
+            </details>
+            <div class="case__links" data-reveal>
+              <span class="case__private">Private repository · walkthrough on request</span>
+              <p>Node.js · SQLite · GitHub Apps · Docker</p>
+            </div>
+          </div>
+        <nav class="project-next section-pad" aria-label="Continue exploring"><a href="../index.html#work">← Back to all work</a><a href="./homeos.html">Next project: HomeOS ↗</a></nav>
+        </article>
+    </main>
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="../index.html#top" aria-label="JKM, back to top"><span class="brand__letters monogram" aria-hidden="true"><span>J</span><span>K</span><span>M</span></span><span class="brand__descriptor">Ideas,<br />made useful.</span></a>
+      <p>Independent digital studio<br />Singapore · <span data-year>2026</span></p>
+      <div><a href="../index.html#work">Work</a><a href="../index.html#people">People</a><a href="../index.html#top">Back to top ↑</a></div>
+    </footer>
+
+<nav class="site-nav floating-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../index.html#top">Home</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#studio">Studio</a>
+        <a href="../index.html#people">People</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    <script src="../script.js" defer></script>
+  </body>
+</html>

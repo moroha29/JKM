@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+ <rect width="960" height="560" rx="16" fill="#eceae5"/>
+ <path d="M16 0h928q16 0 16 16v48H0V16Q0 0 16 0" fill="#252332"/>
+ <g font-family="Arial,sans-serif">
+ <text x="25" y="40" font-size="24" font-weight="700" fill="#fff">website manager</text>
+ <circle cx="715" cy="32" r="5" fill="#c9e899"/><text x="730" y="39" font-size="18" fill="#c9e899">All systems normal</text>
+ <path d="M0 64h194v496H16q-16 0-16-16" fill="#dfdcd5"/>
+ <text x="22" y="110" font-size="17" fill="#625d6c">WEBSITES</text>
+ <rect x="14" y="133" width="165" height="48" rx="8" fill="#252332"/>
+ <text x="32" y="164" font-size="21" fill="#fff">Moof</text>
+ <text x="32" y="216" font-size="21" fill="#393442">mySOS</text>
+ <path d="M22 245h150" stroke="#bdb8af"/>
+ <g fill="#625d6c" font-size="17"><text x="22" y="282">Scheduled releases</text><text x="22" y="322">Published history</text><text x="22" y="362">People &amp; access</text></g>
+ <text x="218" y="110" font-size="23" font-weight="700" fill="#292532">Moof · Homepage</text>
+ <text x="218" y="140" font-size="17" fill="#706a78">Draft saved just now</text>
+ <rect x="718" y="84" width="220" height="48" rx="7" fill="#6555b4"/><text x="741" y="115" font-size="21" fill="#fff">Review &amp; publish</text>
+ <rect x="218" y="165" width="435" height="367" rx="8" fill="#faf7f0" stroke="#c5bfb2"/>
+ <text x="243" y="204" font-size="16" fill="#72685b">LIVE PAGE PREVIEW</text>
+ <rect x="241" y="226" width="388" height="174" rx="5" fill="#f1eadc" stroke="#8776d0" stroke-width="2"/>
+ <text x="262" y="288" font-size="36" fill="#3f352b" font-family="Georgia,serif">Whisked the</text><text x="262" y="335" font-size="36" fill="#3f352b" font-family="Georgia,serif">bright way.</text>
+ <rect x="242" y="423" width="253" height="10" rx="5" fill="#d5cdc1"/><rect x="242" y="447" width="338" height="10" rx="5" fill="#e3dcd1"/>
+ <rect x="679" y="165" width="259" height="367" rx="8" fill="#fff" stroke="#d3cfc5"/>
+ <text x="699" y="202" font-size="19" font-weight="700" fill="#3c3646">Selected block</text>
+ <text x="699" y="244" font-size="17" fill="#6d6577">Headline</text>
+ <rect x="696" y="261" width="223" height="93" rx="5" fill="#f7f5f1" stroke="#d3cfc5"/>
+ <text x="708" y="291" font-size="19" fill="#3c3646">Whisked the</text><text x="708" y="319" font-size="19" fill="#3c3646">bright way.</text>
+ <text x="699" y="390" font-size="17" fill="#6d6577">Text size</text><path d="M703 415h208" stroke="#ddd7e7" stroke-width="6"/><circle cx="809" cy="415" r="8" fill="#6555b4"/>
+ <rect x="696" y="454" width="224" height="57" rx="7" fill="#edf3e4"/><circle cx="712" cy="482" r="5" fill="#668447"/><text x="727" y="488" font-size="18" fill="#486133">1 change ready</text>
+ </g>
+</svg>

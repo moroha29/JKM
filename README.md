@@ -6,13 +6,15 @@ dependency-free static site deployed at <https://moroha29.github.io/JKM/>.
 ## Featured work
 
 - **HomeOS** — map-first, agentic decision support for Singapore home buyers.
-- **Moof** — a multi-direction editorial web and content system for a matcha bar.
-- **Website Manager** — safe visual editing, revision review, and durable publishing.
+- **Moof** — a matcha bar website chosen from six live design directions, now run from two content files.
+- **MySOS** — a merchandise supplier's public site and agent quotation engine, driven by one set of product data.
+- **Website Manager** — safe visual editing, revision review, and durable publishing for Moof and mySOS.
 
-The HomeOS and Moof frames are captures from the project builds. The Website
-Manager frame is an interface reconstruction because its production screens are
-authenticated. Moof photography is credited on the page to Zawani Abdul Ghani /
-HungryGoWhere, matching the source project's content credit.
+The HomeOS, Moof, and MySOS frames are captures from the live project builds
+(<https://moroha29.github.io/moof-website/> and <https://moroha29.github.io/mySOS/>).
+The Website Manager frame is an interface reconstruction because its production
+screens are authenticated. The HomeOS and Website Manager repositories are private,
+so their case studies offer a walkthrough instead of a repository link.
 
 ## Edit the founders
 
@@ -51,3 +53,11 @@ respects reduced-motion preferences.
 `.github/workflows/pages.yml` deploys the repository root through GitHub Pages on
 every push to `main`. No build step, environment secret, or framework runtime is
 required.
+
+## Site navigation
+
+The homepage is one continuous page: introduction, selected work, studio, people,
+and contact. A floating section menu highlights the current section as you scroll.
+The four homepage project cards contain short summaries and link to full case
+studies in `projects/`. Each case study links back to `index.html#work` and to the
+other projects. All links work on static hosting and without JavaScript.

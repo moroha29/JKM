@@ -27,240 +27,98 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="JKM, back to top">
-        <span class="brand__letters">JKM</span>
+        <span class="brand__letters monogram" aria-hidden="true"><span>J</span><span>K</span><span>M</span></span>
         <span class="brand__descriptor">Digital studio<br />Singapore</span>
       </a>
       <div class="availability" aria-label="Availability">
         <span></span> Taking on select projects
       </div>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span><i></i><i></i>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#studio">Studio</a>
-        <a href="#people">People</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__meta" data-reveal>
           <p>Independent digital studio</p>
-          <p>Strategy · Design · Engineering</p>
+          <p class="hero__disciplines">Strategy · Design · Engineering</p>
+          <p class="hero__time">Singapore <strong data-singapore-time>00:00</strong></p>
         </div>
 
-        <div class="hero__heading" data-reveal>
-          <h1 id="hero-title">
-            We make ambitious<br />
-            <em>ideas</em> work.
-          </h1>
-          <p>JKM is a three-person studio turning complex ideas into clear products, expressive brands, and systems that keep working after launch.</p>
-        </div>
-
-        <div class="hero__bottom" data-reveal>
-          <a class="round-link" href="#work" aria-label="Explore selected work">
-            <span>View<br />our work</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0 6-6m-6 6-6-6" /></svg>
-          </a>
-          <div class="hero-mark" aria-hidden="true">
-            <span class="hero-mark__ring"></span>
-            <b>J</b><b>K</b><b>M</b>
-            <small>03 minds / 01 studio</small>
+        <div class="hero__lead">
+          <h1 id="hero-title" data-reveal>We make ambitious<br /> <em>ideas</em> work.</h1>
+          <div class="hero__aside" data-reveal>
+            <p>We make complex ideas feel clear. A three-person Singapore studio bringing strategy, design, and engineering together—from the first idea to everything after launch.</p>
+            <a class="pill-link" href="#work">See selected work <span aria-hidden="true">↘</span></a>
           </div>
-          <p class="sg-time"><span>SGT</span><strong data-singapore-time>00:00</strong></p>
         </div>
       </section>
 
       <div class="ticker" aria-label="Our capabilities">
         <div class="ticker__track">
-          <span>Brand direction</span><i>✦</i><span>Product design</span><i>✦</i><span>Creative development</span><i>✦</i><span>AI systems</span><i>✦</i><span>Digital operations</span><i>✦</i>
-          <span aria-hidden="true">Brand direction</span><i aria-hidden="true">✦</i><span aria-hidden="true">Product design</span><i aria-hidden="true">✦</i><span aria-hidden="true">Creative development</span><i aria-hidden="true">✦</i><span aria-hidden="true">AI systems</span><i aria-hidden="true">✦</i><span aria-hidden="true">Digital operations</span><i aria-hidden="true">✦</i>
+          <div class="ticker__group"><span>Brand direction</span><i aria-hidden="true">✦</i><span>Product design</span><i aria-hidden="true">✦</i><span>Creative development</span><i aria-hidden="true">✦</i><span>AI systems</span><i aria-hidden="true">✦</i><span>Digital operations</span><i aria-hidden="true">✦</i></div>
+          <div class="ticker__group" aria-hidden="true"><span>Brand direction</span><i aria-hidden="true">✦</i><span>Product design</span><i aria-hidden="true">✦</i><span>Creative development</span><i aria-hidden="true">✦</i><span>AI systems</span><i aria-hidden="true">✦</i><span>Digital operations</span><i aria-hidden="true">✦</i></div>
+          <div class="ticker__group" aria-hidden="true"><span>Brand direction</span><i aria-hidden="true">✦</i><span>Product design</span><i aria-hidden="true">✦</i><span>Creative development</span><i aria-hidden="true">✦</i><span>AI systems</span><i aria-hidden="true">✦</i><span>Digital operations</span><i aria-hidden="true">✦</i></div>
+          <div class="ticker__group" aria-hidden="true"><span>Brand direction</span><i aria-hidden="true">✦</i><span>Product design</span><i aria-hidden="true">✦</i><span>Creative development</span><i aria-hidden="true">✦</i><span>AI systems</span><i aria-hidden="true">✦</i><span>Digital operations</span><i aria-hidden="true">✦</i></div>
         </div>
       </div>
 
-      <section class="manifesto section-pad" id="studio" aria-labelledby="manifesto-title">
-        <p class="section-label" data-reveal><span>01</span> Our point of view</p>
-        <div class="manifesto__copy">
-          <h2 id="manifesto-title" data-reveal>Good digital work should feel <em>obvious</em> when you use it—and anything but obvious when you look at what it took to make.</h2>
-          <div class="manifesto__aside" data-reveal>
-            <p>We work across the seams most teams split apart: the idea and its interface, the interface and its code, the launch and everything that happens next.</p>
-            <p>Small by design. Senior by default. Close enough to the work to care about every decision.</p>
-          </div>
-        </div>
-      </section>
+
 
       <section class="work" id="work" aria-labelledby="work-title">
         <header class="section-head section-pad">
-          <p class="section-label" data-reveal><span>02</span> Selected work</p>
-          <h2 id="work-title" data-reveal>Three builds.<br /><em>One standard.</em></h2>
-          <p data-reveal>Real products across AI, hospitality, and publishing operations.</p>
+          <p class="section-label" data-reveal><span>01</span> Selected work</p>
+          <h2 id="work-title" data-reveal>Selected work.<br /><em>One standard.</em></h2>
+          <p data-reveal>Real products across AI, hospitality, commerce, and publishing operations.</p>
         </header>
 
-        <article class="case case--homeos" id="homeos">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">01 / 03</p>
-              <p class="case__type">Product · AI · Geospatial</p>
-            </div>
-            <h3>HomeOS</h3>
-            <p class="case__lede">Making one of life’s biggest decisions feel less like guesswork.</p>
-          </div>
-          <figure class="case__visual case__visual--screen" data-tilt data-reveal>
-            <div class="browser-chrome"><span></span><span></span><span></span><p>HomeOS / decision workspace</p></div>
-            <img src="./assets/projects/tbp-live.png" alt="HomeOS interface showing an HDB home preference setup over a Singapore map" width="1440" height="960" />
-            <figcaption>Production interface captured from the project build.</figcaption>
-          </figure>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Turn fragmented housing data into a decision people can understand and defend.</h4>
-            </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>specialist AI agents</dd></dl>
-              <dl><dt>3</dt><dd>property modes</dd></dl>
-              <dl><dt>1</dt><dd>traceable evidence path</dd></dl>
-            </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We put deterministic geospatial services underneath the AI. Agents can choose tools and explain the shortlist, but every cited number still traces back to reproducible PostGIS-backed evidence.</p>
-            </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>Property search shows inventory. Buyers need judgement.</h5><p>Price, lease, schools, transit, household needs, and future risk sit across different sources. Comparing them manually is slow and hard to explain.</p></section>
-                <section><p>Approach</p><h5>One map, two ways to think.</h5><p>Explore mode gives hands-on control. HomeOS turns a natural-language household brief into a live multi-agent investigation, then lets the buyer question and refine the result.</p></section>
-                <section><p>Outcome</p><h5>A shortlist with reasons, not a black-box score.</h5><p>Typed agent outputs, streaming progress, live resale data, commute analysis, accessibility scoring, and a provider-agnostic model layer make the product both ambitious and testable.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://github.com/kingsmil/TBP" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>FastAPI · React · PostGIS · Pydantic AI</p>
-            </div>
-          </div>
-        </article>
+        <div class="work-overview section-pad" role="region" aria-roledescription="carousel" aria-label="Selected projects">
+        <div class="work-controls"><p>Explore the projects <span data-work-count aria-live="polite"></span></p><div><button type="button" data-work-prev aria-label="Previous projects" aria-controls="work-carousel">←</button><button type="button" data-work-next aria-label="Next projects" aria-controls="work-carousel">→</button></div></div>
+        <ul id="work-carousel" class="work-grid" aria-label="Choose a project" data-reveal>
+          <li>
+            <a class="reel-card reel-card--homeos" href="./projects/homeos.html">
+              <span class="reel-card__media"><img src="./assets/projects/tbp-live.png" alt="" width="1440" height="960" /></span>
+              <span class="reel-card__caption"><i>01</i><b>HomeOS</b><small>Product · AI</small></span><span class="project-summary">A map-based home search workspace combining housing data, AI research, and clear recommendations.</span>
+            </a>
+          </li>
+          <li>
+            <a class="reel-card" href="./projects/moof.html">
+              <span class="reel-card__media"><img src="./assets/projects/moof-home.jpg" alt="" width="1440" height="960" /></span>
+              <span class="reel-card__caption"><i>02</i><b>Moof</b><small>Brand · Web</small></span><span class="project-summary">Brand direction, a distinctive matcha-bar website, and a simple content system the owner can manage.</span>
+            </a>
+          </li>
+          <li>
+            <a class="reel-card" href="./projects/mysos.html">
+              <span class="reel-card__media"><img src="./assets/projects/mysos-home.jpg" alt="" width="1440" height="960" /></span>
+              <span class="reel-card__caption"><i>03</i><b>MySOS</b><small>Commerce · Tools</small></span><span class="project-summary">A merchandise website and quotation tool powered by the same product and pricing data.</span>
+            </a>
+          </li>
+          <li>
+            <a class="reel-card reel-card--manager" href="./projects/manager.html">
+              <span class="reel-card__media" aria-hidden="true">
+                <span class="mini-ui">
+                  <span class="mini-ui__bar"><b>website manager</b><i></i></span>
+                  <span class="mini-ui__side"><i></i><i></i><i></i><i></i><i></i></span>
+                  <span class="mini-ui__canvas"><img src="./assets/projects/moof-photo.jpg" alt="" /><em>Review &amp; publish</em></span>
+                </span>
+              </span>
+              <span class="reel-card__caption"><i>04</i><b>Website Manager</b><small>Platform · Ops</small></span><span class="project-summary">A visual editing platform with before-and-after review, scheduled releases, and reliable publishing.</span>
+            </a>
+          </li>
+        </ul>
+        </div>
 
-        <article class="case case--moof" id="moof">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">02 / 03</p>
-              <p class="case__type">Brand · Web · Content system</p>
-            </div>
-            <h3>Moof</h3>
-            <p class="case__lede">Giving a small matcha bar a digital presence with room to become itself.</p>
-          </div>
-          <div class="moof-gallery" data-reveal>
-            <figure class="moof-gallery__lead" data-tilt>
-              <img src="./assets/projects/moof-live.png" alt="Moof editorial website with large serif typography and café photography" width="1440" height="960" />
-            </figure>
-            <figure><img src="./assets/projects/moof-strawberry.jpg" alt="A strawberry matcha drink from Moof" loading="lazy" /></figure>
-            <figure><img src="./assets/projects/moof-menu.jpg" alt="Moof menu and matcha tools on the counter" loading="lazy" /></figure>
-            <p class="vertical-note">Matcha &amp; hojicha · Shenton Way</p>
-          </div>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Build a distinctive hospitality site without locking a young brand into one expression.</h4>
-            </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>design directions built</dd></dl>
-              <dl><dt>1</dt><dd>shared publishing model</dd></dl>
-              <dl><dt>0</dt><dd>runtime framework overhead</dd></dl>
-            </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>Instead of polishing one safe concept, we built multiple complete directions against the same real content. That made taste discussable—and made the final system flexible enough to evolve without rebuilding the brand from scratch.</p>
-            </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>New brands need conviction and optionality at the same time.</h5><p>The experience had to feel considered, local, and tactile while keeping menus, imagery, hours, and story content straightforward to update.</p></section>
-                <section><p>Approach</p><h5>Editorial restraint over café clichés.</h5><p>Large type, real counter photography, warm negative space, and a deliberately small information architecture let the atmosphere do the selling.</p></section>
-                <section><p>Outcome</p><h5>A fast static experience backed by structured content.</h5><p>Five Astro concepts explore distinct art directions while sharing the operational thinking that later powers visual publishing through Website Manager.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://moroha29.github.io/moof-website/e/" target="_blank" rel="noreferrer">Visit live direction <span>↗</span></a>
-              <a href="https://github.com/moroha29/moof-website" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>Astro · Content architecture · Art direction</p>
-            </div>
-            <p class="photo-credit">Project photography: Zawani Abdul Ghani / HungryGoWhere.</p>
-          </div>
-        </article>
 
-        <article class="case case--manager" id="manager">
-          <div class="case__intro section-pad" data-reveal>
-            <div>
-              <p class="case__number">03 / 03</p>
-              <p class="case__type">Platform · Workflow · Operations</p>
-            </div>
-            <h3>Website Manager</h3>
-            <p class="case__lede">Making publishing feel safe enough to hand over—and powerful enough to keep.</p>
-          </div>
-          <figure class="manager-frame" data-tilt data-reveal>
-            <div class="manager-ui">
-              <header><b>moof / manager</b><span>All systems normal</span><i>JK</i></header>
-              <aside>
-                <p>Websites</p>
-                <a class="active"><span>E</span><b>Editorial</b><i></i></a>
-                <a><span>A</span><b>Original</b><i></i></a>
-                <a><span>B</span><b>Minimal</b><i></i></a>
-                <a><span>C</span><b>Playful</b><i></i></a>
-                <a><span>D</span><b>Contrast</b><i></i></a>
-                <small>+ Publishing history</small>
-                <small>+ People &amp; access</small>
-              </aside>
-              <main>
-                <div class="manager-ui__toolbar"><p><b>Homepage</b><span>Draft saved just now</span></p><button>Review &amp; publish</button></div>
-                <div class="manager-ui__preview">
-                  <img src="./assets/projects/moof-drinks.jpg" alt="" />
-                  <div><small>SHENTON WAY · SINGAPORE</small><strong>Matcha and hojicha,<br />made slowly.</strong></div>
-                  <button>Selected: headline</button>
-                </div>
-              </main>
-              <section>
-                <p>Selected block</p>
-                <label>Headline<textarea readonly>Matcha and hojicha, made slowly.</textarea></label>
-                <label>Font colour<span class="color-input">#2D211C<i></i></span></label>
-                <label>Size<span class="range"><i></i></span></label>
-                <div class="manager-ui__status"><i></i><p><b>1 change ready</b><span>Exact revision protected</span></p></div>
-              </section>
-            </div>
-            <figcaption>Interface reconstruction based on the production workflow.</figcaption>
-          </figure>
-          <div class="case__story section-pad">
-            <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Let non-developers update live sites without turning deployment into a leap of faith.</h4>
-            </div>
-            <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>managed site directions</dd></dl>
-              <dl><dt>2×</dt><dd>before / after review</dd></dl>
-              <dl><dt>24/7</dt><dd>resumable publish queue</dd></dl>
-            </div>
-            <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We treated publishing as a durable, reviewable job—not a button that fires and hopes. Every change maps to real content, every release shows its exact before-and-after, and every deployment can resume after interruption.</p>
-            </div>
-            <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
-              <div>
-                <section><p>Challenge</p><h5>Visual editing is easy. Trustworthy publishing is not.</h5><p>Repeated text, simultaneous editors, scheduled releases, image ownership, and failed deployments all create ways for a “simple CMS” to quietly publish the wrong thing.</p></section>
-                <section><p>Approach</p><h5>Make state and consequence visible.</h5><p>Sandboxed previews bind rendered blocks to canonical JSON paths. Immutable drafts, field-level merges, role-based access, and GitHub pull requests protect the path to production.</p></section>
-                <section><p>Outcome</p><h5>A compact operations layer with serious foundations.</h5><p>Encrypted recovery, audit history, notification linking, deployment health, retries, and production-ready OVH orchestration live behind an interface built for everyday use.</p></section>
-              </div>
-            </details>
-            <div class="case__links" data-reveal>
-              <a href="https://github.com/moroha29/website-manager" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>Node.js · SQLite · GitHub Apps · Docker</p>
-            </div>
-          </div>
-        </article>
+
+
+
+
+
+
       </section>
 
-      <section class="why section-pad" aria-labelledby="why-title">
-        <p class="section-label" data-reveal><span>03</span> Why JKM</p>
+<section class="why section-pad" id="studio" aria-labelledby="why-title">
+        <p class="section-label" data-reveal><span>02</span> Why JKM</p>
         <div class="why__head">
           <h2 id="why-title" data-reveal>Less handoff.<br /><em>More ownership.</em></h2>
           <p data-reveal>You work with the people making the decisions—and those same people stay close from first sketch to production.</p>
@@ -273,21 +131,46 @@
         </ol>
       </section>
 
-      <section class="capabilities" aria-labelledby="capabilities-title">
-        <div class="capabilities__intro section-pad">
-          <p class="section-label" data-reveal><span>04</span> What we do</p>
-          <h2 id="capabilities-title" data-reveal>From the first <em>why</em><br />to the last mile.</h2>
-        </div>
-        <div class="capabilities__grid">
-          <article data-reveal><span>01</span><h3>Shape</h3><p>Product strategy<br />Research synthesis<br />Experience definition<br />Technical direction</p></article>
-          <article data-reveal><span>02</span><h3>Express</h3><p>Brand systems<br />Art direction<br />Interface design<br />Content architecture</p></article>
-          <article data-reveal><span>03</span><h3>Build</h3><p>Web applications<br />AI experiences<br />Data platforms<br />Creative development</p></article>
-          <article data-reveal><span>04</span><h3>Run</h3><p>Cloud deployment<br />Publishing systems<br />Performance &amp; access<br />Operational tooling</p></article>
+      <section class="services section-pad" id="services" aria-labelledby="capabilities-title">
+        <header class="services__head">
+          <p class="section-label"><span>03</span> What we do</p>
+          <h2 id="capabilities-title">From idea to<br /><em>everyday use.</em></h2>
+          <p>Thoughtful design. Useful technology. The support to keep it all moving.</p>
+        </header>
+        <div class="services__list">
+          <details class="service" name="services" open>
+            <summary><span class="service__number">01</span><span class="service__title">Brand & websites</span><span class="service__description">Distinctive websites that feel like your business.</span><span class="service__toggle" aria-hidden="true"></span></summary>
+            <div class="service__body">
+              <div class="service__copy"><p>Distinctive websites that feel like your business.</p><ul><li>Brand direction</li><li>Interface design</li><li>Content architecture</li></ul></div>
+              <a class="service__project" href="./projects/moof.html"><img src="./assets/projects/moof-home.jpg" alt="A matcha bar with a digital identity of its own." width="1440" height="960" loading="lazy" /><span><span><small>In practice</small><strong>Moof</strong></span><span aria-hidden="true">↗</span></span></a>
+            </div>
+          </details>
+          <details class="service" name="services">
+            <summary><span class="service__number">02</span><span class="service__title">Digital products & AI</span><span class="service__description">Useful tools that make complex decisions simpler.</span><span class="service__toggle" aria-hidden="true"></span></summary>
+            <div class="service__body">
+              <div class="service__copy"><p>Useful tools that make complex decisions simpler.</p><ul><li>Product strategy</li><li>Web applications</li><li>AI & data systems</li></ul></div>
+              <a class="service__project" href="./projects/homeos.html"><img src="./assets/projects/tbp-live.png" alt="Housing data and AI research, brought into one decision workspace." width="1440" height="960" loading="lazy" /><span><span><small>In practice</small><strong>HomeOS</strong></span><span aria-hidden="true">↗</span></span></a>
+            </div>
+          </details>
+          <details class="service" name="services">
+            <summary><span class="service__number">03</span><span class="service__title">Digital solutions</span><span class="service__description">Practical tools that take the manual work out of your day.</span><span class="service__toggle" aria-hidden="true"></span></summary>
+            <div class="service__body">
+              <div class="service__copy"><p>Turn complex pricing and repetitive tasks into tools your team can use with confidence.</p><ul><li>Quotation engines</li><li>Business tools</li><li>Workflow automation</li></ul></div>
+              <a class="service__project service__project--tool" href="./projects/mysos.html"><img src="./assets/projects/mysos-quote.jpg" alt="MySOS quotation engine with customer details, order items, and a live quotation total" width="1440" height="960" loading="lazy" /><span><span><small>In practice</small><strong>MySOS quotation engine</strong></span><span aria-hidden="true">↗</span></span></a>
+            </div>
+          </details>
+          <details class="service" name="services">
+            <summary><span class="service__number">04</span><span class="service__title">Content & operations</span><span class="service__description">Systems your team can confidently run.</span><span class="service__toggle" aria-hidden="true"></span></summary>
+            <div class="service__body">
+              <div class="service__copy"><p>Systems your team can confidently run.</p><ul><li>Visual editing</li><li>Publishing workflows</li><li>Cloud operations</li></ul></div>
+              <a class="service__project" href="./projects/manager.html"><img src="./assets/projects/manager-preview.svg" alt="Website Manager interface reconstruction showing website selection, a content editor, and review and publish controls" width="960" height="560" loading="lazy" /><span><span><small>Interface reconstruction</small><strong>Website Manager</strong></span><span aria-hidden="true">↗</span></span></a>
+            </div>
+          </details>
         </div>
       </section>
 
       <section class="people section-pad" id="people" aria-labelledby="people-title">
-        <p class="section-label" data-reveal><span>05</span> The three behind JKM</p>
+        <p class="section-label" data-reveal><span>04</span> The three behind JKM</p>
         <header class="people__head">
           <h2 id="people-title" data-reveal>Small enough to know<br /><em>who did the work.</em></h2>
           <p data-reveal>The founders’ names, roles, portraits, and individual stories will be added here when they are ready.</p>
@@ -310,7 +193,7 @@
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact__top section-pad">
-          <p class="section-label" data-reveal><span>06</span> Start something</p>
+          <p class="section-label" data-reveal><span>05</span> Start something</p>
           <p class="contact__note" data-reveal>Have a difficult idea, a product that needs clarity, or a system that has outgrown its first version?</p>
         </div>
         <div class="contact__cta section-pad" data-reveal>
@@ -324,11 +207,20 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand brand--footer" href="#top"><span class="brand__letters">JKM</span><span class="brand__descriptor">Ideas,<br />made useful.</span></a>
+      <a class="brand brand--footer" href="#top" aria-label="JKM, back to top"><span class="brand__letters monogram" aria-hidden="true"><span>J</span><span>K</span><span>M</span></span><span class="brand__descriptor">Ideas,<br />made useful.</span></a>
       <p>Independent digital studio<br />Singapore · <span data-year>2026</span></p>
       <div><a href="#work">Work</a><a href="#people">People</a><a href="#top">Back to top ↑</a></div>
     </footer>
 
+
+
+<nav class="site-nav floating-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
+        <a href="#work">Work</a>
+        <a href="#studio">Studio</a>
+        <a href="#people">People</a>
+        <a href="#contact">Contact</a>
+      </nav>
     <script src="./script.js" defer></script>
   </body>
 </html>
