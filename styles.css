@@ -591,3 +591,5 @@ a.contact-option:hover { transform: translateY(-3px); border-color: var(--acid);
 .contact-soon-label { max-width: 17ch; font-size: .875rem; line-height: 1.6; }
 @media (max-width: 900px) { .contact-welcome { grid-template-columns: 1fr; } }
 @media (max-width: 420px) { .contact-option { padding: 1.1rem; } .contact-option--soon { align-items: start; flex-direction: column; } .contact-soon-label { max-width: none; } }
+/* Continuous movement: no snap points or animated rewind at the loop boundary. */
+.work-grid { scroll-snap-type: none; scroll-behavior: auto; }
