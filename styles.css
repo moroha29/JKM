@@ -593,3 +593,115 @@ a.contact-option:hover { transform: translateY(-3px); border-color: var(--acid);
 @media (max-width: 420px) { .contact-option { padding: 1.1rem; } .contact-option--soon { align-items: start; flex-direction: column; } .contact-soon-label { max-width: none; } }
 /* Continuous movement: no snap points or animated rewind at the loop boundary. */
 .work-grid { scroll-snap-type: none; scroll-behavior: auto; }
+
+/* One clear public destination per case study. */
+.case__links { justify-content: space-between; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.case__links a { display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; padding: .9rem 1.3rem; border: 0; border-radius: 2rem; color: var(--paper); background: var(--ink); text-transform: none; font-size: 1rem; }
+.case__links a:hover { color: var(--ink); background: var(--acid); }
+.case__links p { max-width: 30ch; margin: 0; line-height: 1.6; }
+
+/* Compact section rhythm on phones. */
+@media (max-width: 680px) {
+  .why, .people { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .why__head, .people__head { gap: 1.25rem; }
+  .why__head h2, .people__head h2 { margin-top: 1.5rem; }
+  .why__head p, .people__head p { margin-top: 0; margin-bottom: 0; }
+}
+
+/* One section-heading layout everywhere: label on its own line, then the title with its note at the bottom right. */
+.section-head, .services__head, .why__head, .people__head { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); align-items: end; gap: 0 3rem; }
+.section-head > .section-label, .services__head > .section-label { grid-column: 1 / -1; align-self: start; }
+.section-head h2, .services__head h2, .why__head h2, .people__head h2 { grid-column: 1; margin: 5rem 0 0; }
+.section-head > p:last-child, .services__head > p:last-child, .why__head p, .people__head p { grid-column: 2; max-width: 22rem; margin: 0 0 .7rem; }
+.work > .section-head h2 { margin-top: 5rem; }
+.services__head h2 { font-size: clamp(2.8rem, 5.5vw, 6rem); letter-spacing: -.055em; line-height: 1.04; }
+@media (max-width: 980px) {
+  .section-head, .services__head, .why__head, .people__head { grid-template-columns: 1fr; }
+  .section-head > p:last-child, .services__head > p:last-child, .why__head p, .people__head p { grid-column: 1; max-width: 28rem; margin: 1.5rem 0 0 35%; }
+}
+@media (max-width: 680px) {
+  .section-head, .services__head, .why__head, .people__head { gap: 0; }
+  .section-head h2, .services__head h2, .why__head h2, .people__head h2, .work > .section-head h2 { margin-top: 1.5rem; }
+  .section-head > p:last-child, .services__head > p:last-child, .why__head p, .people__head p { margin: 1.25rem 0 0; }
+}
+
+/* Services: short description sits under its title on the left; the open item shows its fuller statement instead. */
+.service summary { grid-template-columns: 3rem minmax(0, 1fr) 44px; grid-template-rows: auto auto; column-gap: 1.5rem; row-gap: .4rem; }
+.service__number { grid-column: 1; grid-row: 1; }
+.service__title { grid-column: 2; grid-row: 1; }
+.service__description { display: block; grid-column: 2; grid-row: 2; max-width: 48ch; }
+.service__toggle { grid-column: 3; grid-row: 1 / 3; }
+.service[open] .service__description { display: none; }
+@media (max-width: 980px) {
+  .service summary { grid-template-columns: 2rem minmax(0, 1fr) 44px; column-gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .service summary { grid-template-columns: 1.5rem minmax(0, 1fr) 44px; column-gap: .65rem; }
+  .service__description { font-size: .95rem; }
+}
+
+/* Services: compact rows, and on wide screens the open item's picture sits beside the collapse button. */
+.service summary { padding: 1.35rem 0; }
+.service__title { font-size: clamp(1.3rem, 2vw, 2.1rem); }
+.service__toggle { align-self: start; width: 40px; height: 40px; }
+.service__toggle::before, .service__toggle::after { top: 19px; left: 13px; }
+.service__copy > p { max-width: 30ch; margin-bottom: 1.1rem; font-size: clamp(1.1rem, 1.5vw, 1.5rem); }
+.service__copy li { padding: .4rem .75rem; font-size: .82rem; }
+.service__project > span { padding-top: .6rem; }
+.service__project strong { font-size: 1rem; }
+@media (min-width: 981px) {
+  .service { --service-media: clamp(16rem, 24vw, 21rem); position: relative; }
+  .service__body { display: block; min-height: calc(var(--service-media) / 2 + .25rem); padding: 0 calc(var(--service-media) + 40px + 5.5rem) 1.75rem 4.5rem; }
+  .service__project img, .service__project--tool img, .service__project img[src$="manager-preview.svg"] { aspect-ratio: 2 / 1; background: #dcdbd2; }
+  .service__project { position: absolute; top: 1.35rem; right: calc(40px + 1.5rem); width: var(--service-media); max-width: none; }
+}
+
+/* Services: states used while an item animates open or closed. */
+.service.is-animating, .service.is-animating .service__body { overflow: hidden; }
+.service.is-closing .service__description, .service.is-opening .service__description { display: block; overflow: hidden; }
+.service__toggle, .service__toggle::after { transition: background .35s, border-color .35s, transform .35s cubic-bezier(.2,.7,.2,1); }
+.service.is-closing .service__toggle { background: transparent; border-color: #b5b7a8; }
+.service.is-closing .service__toggle::after { transform: rotate(90deg); }
+
+/* Project pages: let the decisive move use the full text column with relaxed leading. */
+.case__decision p:last-child { max-width: 62rem; line-height: 1.38; letter-spacing: -.005em; }
+
+/* Project facts: a row of two figures splits the width evenly. */
+@media (min-width: 681px) {
+  .case__facts:has(> dl:nth-child(2):last-child) { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Project pages have their own navigation, so they don't need room for the floating homepage menu. */
+body.project-page { padding-bottom: 0; }
+
+/* Project pages: the project bar stays pinned while reading, with larger, easier-to-read links. */
+.project-page .case { overflow: visible; overflow-x: clip; }
+.project-nav { position: sticky; top: 0; z-index: 40; padding-top: 1rem; padding-bottom: 1rem; background: rgba(242,239,230,.94); backdrop-filter: blur(12px); }
+.project-nav a, .project-nav > div a { font-size: clamp(1.05rem, 1.25vw, 1.25rem); min-height: 48px; }
+.project-nav > div { gap: .5rem; }
+.project-nav > div a { padding: .6rem 1.1rem; }
+@media (max-width: 680px) {
+  .project-nav { flex-direction: row; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; padding-top: .6rem; padding-bottom: .6rem; }
+  .project-nav a, .project-nav > div a { font-size: 1.05rem; min-height: 44px; }
+  .project-nav > div { flex-wrap: nowrap; gap: .25rem; width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .project-nav > div::-webkit-scrollbar { display: none; }
+  .project-nav > div a { flex-shrink: 0; padding: .5rem .85rem; }
+}
+/* Project bar: full tabs on wider screens; on phones, Back plus a compact project switcher. */
+.project-nav__back { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap; }
+.project-switch { display: none; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 680px) {
+  .project-nav { flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .55rem; padding-bottom: .55rem; }
+  .js .project-switch { display: inline-flex; align-items: center; gap: .55rem; min-width: 0; min-height: 44px; padding: .4rem .6rem .4rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 2rem; font: inherit; font-size: 1.05rem; font-weight: 600; cursor: pointer; }
+  .project-switch__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .project-switch small { flex-shrink: 0; color: var(--muted); font-family: var(--mono); font-size: .8rem; font-weight: 400; }
+  .project-switch i { position: relative; flex-shrink: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--ink); }
+  .project-switch i::before { content: ""; position: absolute; top: 42%; left: 50%; width: .4rem; height: .4rem; border-right: 1.5px solid var(--paper); border-bottom: 1.5px solid var(--paper); transform: translate(-50%, -50%) rotate(45deg); transition: transform .25s; }
+  .project-nav.is-open .project-switch i::before { top: 55%; transform: translate(-50%, -50%) rotate(-135deg); }
+  .js .project-nav > .project-nav__tabs { display: none; }
+  .js .project-nav.is-open > .project-nav__tabs { position: absolute; top: calc(100% + .4rem); right: var(--pad); display: flex; flex-direction: column; gap: .15rem; width: min(17rem, calc(100% - 2 * var(--pad))); padding: .4rem; overflow: visible; background: var(--paper); border: 1px solid var(--line); border-radius: 1rem; box-shadow: 0 1.25rem 2.5rem rgba(17,16,13,.18); animation: project-menu-in .2s ease-out; }
+  .js .project-nav .project-nav__tabs a { justify-content: space-between; width: 100%; min-height: 48px; padding: .7rem 1rem; border-radius: .7rem; font-size: 1.05rem; }
+  .js .project-nav .project-nav__tabs a[aria-current="page"]::after { content: "Viewing"; color: rgba(242,239,230,.7); font-family: var(--mono); font-size: .75rem; }
+}
+@keyframes project-menu-in { from { opacity: 0; transform: translateY(-.4rem); } }

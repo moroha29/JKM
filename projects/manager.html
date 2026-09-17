@@ -39,14 +39,14 @@
 
     <main id="main">
         <article class="case case--manager" id="manager">
-          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work">← All work</a><div><a href="./homeos.html">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html">MySOS</a><a href="./manager.html" aria-current="page">Website Manager</a></div></nav>
+          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work" aria-label="Back to all work"><span aria-hidden="true">←</span> Back</a><button class="project-switch" type="button" aria-expanded="false" aria-controls="project-tabs"><span class="project-switch__label"><span class="visually-hidden">Current project: </span>Website Manager</span><small>04 / 04</small><i aria-hidden="true"></i></button><div class="project-nav__tabs" id="project-tabs"><a href="./homeos.html">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html">MySOS</a><a href="./manager.html" aria-current="page">Website Manager</a></div></nav>
           <div class="case__intro section-pad" data-reveal>
             <div>
               <p class="case__number">04 / 04</p>
-              <p class="case__type">Platform · Workflow · Operations</p>
+              <p class="case__type">Website editing · Publishing</p>
             </div>
             <h1>Website Manager</h1>
-            <p class="case__lede">Making publishing feel safe enough to hand over—and powerful enough to keep.</p>
+            <p class="case__lede">Letting business owners update their own websites—safely, and without calling a developer.</p>
           </div>
           <figure class="manager-frame" data-tilt data-reveal>
             <div class="manager-ui" inert>
@@ -75,36 +75,35 @@
                 <div class="manager-ui__status"><i></i><p><b>1 change ready</b><span>Exact revision protected</span></p></div>
               </section>
             </div>
-            <figcaption>Interface reconstruction based on the production workflow.</figcaption>
+            <figcaption>An illustration of the editing screen.</figcaption>
           </figure>
           <div class="case__story section-pad">
             <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Let non-developers update live sites without turning deployment into a leap of faith.</h4>
+              <p>What they needed</p>
+              <h4>Let people with no technical background change their live website without worrying about breaking it.</h4>
             </div>
             <div class="case__facts" data-reveal>
-              <dl><dt>2</dt><dd>live client sites managed</dd></dl>
-              <dl><dt>2×</dt><dd>before / after review</dd></dl>
-              <dl><dt>24/7</dt><dd>resumable publish queue</dd></dl>
+              <dl><dt>2</dt><dd>client websites run through it</dd></dl>
+              <dl><dt>2×</dt><dd>side-by-side before-and-after check</dd></dl>
+              <dl><dt>24/7</dt><dd>updates that finish even after an interruption</dd></dl>
             </div>
             <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We treated publishing as a durable, reviewable job—not a button that fires and hopes. Every change maps to real content, every release shows its exact before-and-after, and every deployment can resume after interruption.</p>
+              <p class="eyebrow">The key idea</p>
+              <p>Every change is saved, shown side by side with the current website, and only goes live after a final check. If something interrupts an update, it simply picks up where it left off.</p>
             </div>
             <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
+              <summary><span>Read the full story</span><i></i></summary>
               <div>
-                <section><p>Challenge</p><h5>Visual editing is easy. Trustworthy publishing is not.</h5><p>Repeated text, simultaneous editors, scheduled releases, image ownership, and failed deployments all create ways for a “simple CMS” to quietly publish the wrong thing.</p></section>
-                <section><p>Approach</p><h5>Make state and consequence visible.</h5><p>Live previews of Moof and mySOS bind rendered blocks to their real content fields. Immutable drafts, field-level merges, per-site access, and GitHub pull requests protect the path to production.</p></section>
-                <section><p>Outcome</p><h5>A compact operations layer with serious foundations.</h5><p>Scheduled releases, audit history, email and Telegram alerts, deployment health checks, and automatic retries run in Docker on AWS Lightsail, behind an interface built for everyday use.</p></section>
+                <section><p>The problem</p><h5>Editing is easy. Updating a live website safely is not.</h5><p>Two people editing at once, updates planned for later, shared photos, and updates that fail halfway can all put the wrong thing on a live website.</p></section>
+                <section><p>What we did</p><h5>Show exactly what will change.</h5><p>Owners click the part of their Moof or MySOS website they want to change and see the result straight away. Every draft is kept, each person only sees the websites they look after, and nothing goes live without a check.</p></section>
+                <section><p>The result</p><h5>Simple on the surface, dependable underneath.</h5><p>Owners can schedule updates, look back at past versions, and get email or Telegram alerts. The system checks that each update actually went live, and tries again on its own if it did not.</p></section>
               </div>
             </details>
             <div class="case__links" data-reveal>
-              <span class="case__private">Private repository · walkthrough on request</span>
-              <p>Node.js · SQLite · GitHub Apps · Docker</p>
+              <span class="case__private">Walkthrough available on request</span>
+              <p>Visual editing · Publishing · Ongoing support</p>
             </div>
           </div>
-        <nav class="project-next section-pad" aria-label="Continue exploring"><a href="../index.html#work">← Back to all work</a><a href="./homeos.html">Next project: HomeOS ↗</a></nav>
         </article>
     </main>
     <footer class="site-footer">
@@ -113,13 +112,6 @@
       <div><a href="../index.html#work">Work</a><a href="../index.html#people">People</a><a href="../index.html#top">Back to top ↑</a></div>
     </footer>
 
-<nav class="site-nav floating-nav" id="site-nav" aria-label="Main navigation">
-        <a href="../index.html#top">Home</a>
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#studio">Studio</a>
-        <a href="../index.html#people">People</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
     <script src="../script.js" defer></script>
   </body>
 </html>

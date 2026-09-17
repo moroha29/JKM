@@ -39,24 +39,24 @@
 
     <main id="main">
         <article class="case case--mysos" id="mysos">
-          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work">← All work</a><div><a href="./homeos.html">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html" aria-current="page">MySOS</a><a href="./manager.html">Website Manager</a></div></nav>
+          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work" aria-label="Back to all work"><span aria-hidden="true">←</span> Back</a><button class="project-switch" type="button" aria-expanded="false" aria-controls="project-tabs"><span class="project-switch__label"><span class="visually-hidden">Current project: </span>MySOS</span><small>03 / 04</small><i aria-hidden="true"></i></button><div class="project-nav__tabs" id="project-tabs"><a href="./homeos.html">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html" aria-current="page">MySOS</a><a href="./manager.html">Website Manager</a></div></nav>
           <div class="case__intro section-pad" data-reveal>
             <div>
               <p class="case__number">03 / 04</p>
-              <p class="case__type">Commerce · Web · Sales tooling</p>
+              <p class="case__type">Merchandise · Website · Quote tool</p>
             </div>
             <h1>MySOS</h1>
-            <p class="case__lede">One source of truth for a merchandise supplier’s website and its sales quotes.</p>
+            <p class="case__lede">A clearer website and a faster way to price orders for a custom merchandise company.</p>
           </div>
           <div class="mysos-showcase" data-reveal>
             <figure class="mysos-showcase__site" data-tilt>
-              <div class="browser-chrome"><span></span><span></span><span></span><p>moroha29.github.io/mySOS</p></div>
+              <div class="browser-chrome"><span></span><span></span><span></span><p>MySOS website</p></div>
               <img src="../assets/projects/mysos-home.jpg" alt="MySOS homepage: “Custom Merchandise, Made Simple.” with quote buttons and a cluster of branded products" width="1440" height="960" />
             </figure>
             <figure class="mysos-showcase__phone"><img src="../assets/projects/mysos-mobile.jpg" alt="The MySOS homepage on a phone" width="585" height="1170" loading="lazy" /></figure>
             <figure class="mysos-showcase__tool">
-              <div class="browser-chrome"><span></span><span></span><span></span><p>Agent quotation engine</p></div>
-              <img src="../assets/projects/mysos-quote.jpg" alt="MySOS agent quotation form with customer details, order items, and a live quotation total" width="1440" height="960" loading="lazy" />
+              <div class="browser-chrome"><span></span><span></span><span></span><p>Sales quote tool</p></div>
+              <img src="../assets/projects/mysos-quote.jpg" alt="MySOS sales quote form with customer details, order items, and a running total" width="1440" height="960" loading="lazy" />
             </figure>
             <figure class="mysos-showcase__stories">
               <div class="browser-chrome"><span></span><span></span><span></span><p>Success stories</p></div>
@@ -65,34 +65,31 @@
           </div>
           <div class="case__story section-pad">
             <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Give a custom-merchandise supplier a credible public site—and its sales agents a faster way to quote than the pricing workbook.</h4>
+              <p>What they needed</p>
+              <h4>Give a custom merchandise company a trustworthy website—and help its sales team send quotes faster than working through a complicated spreadsheet.</h4>
             </div>
             <div class="case__facts" data-reveal>
-              <dl><dt>8</dt><dd>quantity pricing tiers</dd></dl>
-              <dl><dt>4</dt><dd>printing methods priced</dd></dl>
-              <dl><dt>0</dt><dd>servers to maintain</dd></dl>
+              <dl><dt>8</dt><dd>price levels by order size</dd></dl>
+              <dl><dt>4</dt><dd>printing styles priced automatically</dd></dl>
+              <dl><dt>1</dt><dd>price list shared by the website and the quote tool</dd></dl>
             </div>
             <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We made one set of product data feed both surfaces. The public catalogue shows only “from” prices, while the agent tool runs the workbook’s exact cost, tier, and margin logic in the browser—so there is no second price list to drift out of date.</p>
+              <p class="eyebrow">The key idea</p>
+              <p>The website and the sales team’s quote tool use the same list of products and prices. Customers see simple “from” prices, the sales team gets exact quotes, and a price only ever needs updating in one place.</p>
             </div>
             <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
+              <summary><span>Read the full story</span><i></i></summary>
               <div>
-                <section><p>Challenge</p><h5>Pricing lived in a spreadsheet few people could read.</h5><p>Tees, polos, caps, jerseys, and cut-and-sew each price differently, with printing, add-ons, and quantity tiers layered on top. Quotes were slow, and the old website answered few questions.</p></section>
-                <section><p>Approach</p><h5>Tested engines under a static site.</h5><p>Pure calculation engines for products, printing, tiers, and add-ons sit beneath both surfaces. Every public route is prerendered to static HTML, with real Google reviews and client logos.</p></section>
-                <section><p>Outcome</p><h5>Quotes in minutes, content the owner controls.</h5><p>Agents build multi-item quotations with live cost and margin checks, then download a formatted Excel file generated on their own device. Headlines, on-page wording, and hero pictures are editable through Website Manager.</p></section>
+                <section><p>The problem</p><h5>Pricing was stuck in a hard-to-read spreadsheet.</h5><p>T-shirts, polos, caps, jerseys, and custom-made items are all priced differently, with printing, extras, and order size on top. Quotes took too long, and the old website left customers with questions.</p></section>
+                <section><p>What we did</p><h5>A helpful website and a simple quote tool.</h5><p>The new website shows the products, the kinds of customers MySOS serves, past projects, real Google reviews, and the organisations it works with. The quote tool guides a salesperson through each order step by step.</p></section>
+                <section><p>The result</p><h5>Quotes in minutes, and a website the owner controls.</h5><p>Sales staff put together quotes with several items, see the cost and profit as they go, and download a ready-to-send Excel file. The owner can change headlines, wording, and main pictures through Website Manager.</p></section>
               </div>
             </details>
             <div class="case__links" data-reveal>
-              <a href="https://moroha29.github.io/mySOS/" target="_blank" rel="noreferrer">Visit the live site <span>↗</span></a>
-              <a href="https://moroha29.github.io/mySOS/quotation_engine/" target="_blank" rel="noreferrer">Open the quote tool <span>↗</span></a>
-              <a href="https://github.com/moroha29/mySOS" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
-              <p>React · Vite · ExcelJS · Vitest</p>
+              <a href="https://moroha29.github.io/mySOS/" target="_blank" rel="noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+              <p>Website design · Quote tool · Pricing</p>
             </div>
           </div>
-        <nav class="project-next section-pad" aria-label="Continue exploring"><a href="../index.html#work">← Back to all work</a><a href="./manager.html">Next project: Website Manager ↗</a></nav>
         </article>
     </main>
     <footer class="site-footer">
@@ -101,13 +98,6 @@
       <div><a href="../index.html#work">Work</a><a href="../index.html#people">People</a><a href="../index.html#top">Back to top ↑</a></div>
     </footer>
 
-<nav class="site-nav floating-nav" id="site-nav" aria-label="Main navigation">
-        <a href="../index.html#top">Home</a>
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#studio">Studio</a>
-        <a href="../index.html#people">People</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
     <script src="../script.js" defer></script>
   </body>
 </html>

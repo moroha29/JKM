@@ -39,11 +39,11 @@
 
     <main id="main">
         <article class="case case--homeos" id="homeos">
-          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work">← All work</a><div><a href="./homeos.html" aria-current="page">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html">MySOS</a><a href="./manager.html">Website Manager</a></div></nav>
+          <nav class="project-nav section-pad" aria-label="Project navigation"><a class="project-nav__back" href="../index.html#work" aria-label="Back to all work"><span aria-hidden="true">←</span> Back</a><button class="project-switch" type="button" aria-expanded="false" aria-controls="project-tabs"><span class="project-switch__label"><span class="visually-hidden">Current project: </span>HomeOS</span><small>01 / 04</small><i aria-hidden="true"></i></button><div class="project-nav__tabs" id="project-tabs"><a href="./homeos.html" aria-current="page">HomeOS</a><a href="./moof.html">Moof</a><a href="./mysos.html">MySOS</a><a href="./manager.html">Website Manager</a></div></nav>
           <div class="case__intro section-pad" data-reveal>
             <div>
               <p class="case__number">01 / 04</p>
-              <p class="case__type">Product · AI · Geospatial</p>
+              <p class="case__type">Home buying · AI · Maps</p>
             </div>
             <h1>HomeOS</h1>
             <p class="case__lede">Making one of life’s biggest decisions feel less like guesswork.</p>
@@ -51,36 +51,35 @@
           <figure class="case__visual case__visual--screen" data-tilt data-reveal>
             <div class="browser-chrome"><span></span><span></span><span></span><p>HomeOS / decision workspace</p></div>
             <img src="../assets/projects/tbp-live.png" alt="HomeOS interface showing an HDB home preference setup over a Singapore map" width="1440" height="960" />
-            <figcaption>Production interface captured from the project build.</figcaption>
+            <figcaption>A screenshot of the working product.</figcaption>
           </figure>
           <div class="case__story section-pad">
             <div class="case__statement" data-reveal>
-              <p>The brief</p>
-              <h4>Turn fragmented housing data into a decision people can understand and defend.</h4>
+              <p>What they needed</p>
+              <h4>Help home buyers in Singapore make sense of scattered housing information and choose with confidence.</h4>
             </div>
             <div class="case__facts" data-reveal>
-              <dl><dt>5</dt><dd>specialist AI agents</dd></dl>
-              <dl><dt>3</dt><dd>property modes</dd></dl>
-              <dl><dt>1</dt><dd>traceable evidence path</dd></dl>
+              <dl><dt>5</dt><dd>AI helpers working together</dd></dl>
+              <dl><dt>3</dt><dd>kinds of homes covered</dd></dl>
+              <dl><dt>1</dt><dd>map that brings it all together</dd></dl>
             </div>
             <div class="case__decision" data-reveal>
-              <p class="eyebrow">The decisive move</p>
-              <p>We put deterministic geospatial services underneath the AI. Agents can choose tools and explain the shortlist, but every cited number still traces back to reproducible PostGIS-backed evidence.</p>
+              <p class="eyebrow">The key idea</p>
+              <p>The AI does the legwork of researching and explaining options, but every number it quotes comes from real housing data that can be checked—so buyers can trust the shortlist instead of just taking its word for it.</p>
             </div>
             <details class="case__details" data-reveal>
-              <summary><span>Read the build story</span><i></i></summary>
+              <summary><span>Read the full story</span><i></i></summary>
               <div>
-                <section><p>Challenge</p><h5>Property search shows inventory. Buyers need judgement.</h5><p>Price, lease, schools, transit, household needs, and future risk sit across different sources. Comparing them manually is slow and hard to explain.</p></section>
-                <section><p>Approach</p><h5>One map, two ways to think.</h5><p>Explore mode gives hands-on control. HomeOS turns a natural-language household brief into a live multi-agent investigation, then lets the buyer question and refine the result.</p></section>
-                <section><p>Outcome</p><h5>A shortlist with reasons, not a black-box score.</h5><p>Typed agent outputs, streaming progress, live resale data, commute analysis, accessibility scoring, and a provider-agnostic model layer make the product both ambitious and testable.</p></section>
+                <section><p>The problem</p><h5>Listings show homes. Buyers need advice.</h5><p>Prices, remaining lease, schools, transport, family needs, and future plans all live in different places. Comparing them by hand is slow and hard to explain to anyone else.</p></section>
+                <section><p>What we did</p><h5>One map, two ways to search.</h5><p>Buyers can explore the map themselves, or simply describe their household in everyday words and let HomeOS look into the options for them—then ask questions and fine-tune the results.</p></section>
+                <section><p>The result</p><h5>A shortlist with reasons you can see.</h5><p>Buyers get a clear shortlist that explains itself, with recent sale prices, travel times, what is nearby, and how well each home fits their needs.</p></section>
               </div>
             </details>
             <div class="case__links" data-reveal>
-              <span class="case__private">Private repository · walkthrough on request</span>
-              <p>FastAPI · React · PostGIS · Pydantic AI</p>
+              <span class="case__private">Walkthrough available on request</span>
+              <p>Research · Product design · AI</p>
             </div>
           </div>
-        <nav class="project-next section-pad" aria-label="Continue exploring"><a href="../index.html#work">← Back to all work</a><a href="./moof.html">Next project: Moof ↗</a></nav>
         </article>
     </main>
     <footer class="site-footer">
@@ -89,13 +88,6 @@
       <div><a href="../index.html#work">Work</a><a href="../index.html#people">People</a><a href="../index.html#top">Back to top ↑</a></div>
     </footer>
 
-<nav class="site-nav floating-nav" id="site-nav" aria-label="Main navigation">
-        <a href="../index.html#top">Home</a>
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#studio">Studio</a>
-        <a href="../index.html#people">People</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
     <script src="../script.js" defer></script>
   </body>
 </html>
