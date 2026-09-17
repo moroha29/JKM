@@ -115,30 +115,56 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 const workRail = document.querySelector('#work-carousel');
 if (workRail) {
-  const previous = document.querySelector('[data-work-prev]');
-  const next = document.querySelector('[data-work-next]');
+  const playback = document.querySelector('[data-work-playback]');
   const count = document.querySelector('[data-work-count]');
+  const region = document.querySelector('.work-overview');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let playing = !motionPreference.matches;
+  let hovered = false;
+  let touching = false;
+  let visible = false;
+  let timer;
+
   function updateWorkRail() {
     const cards = [...workRail.children];
     const railBounds = workRail.getBoundingClientRect();
-    const visible = cards.map((card, index) => ({ index, bounds: card.getBoundingClientRect() }))
+    const shown = cards.map((card, index) => ({ index, bounds: card.getBoundingClientRect() }))
       .filter(({ bounds }) => bounds.left < railBounds.right - 30 && bounds.right > railBounds.left + 30);
-    previous.disabled = workRail.scrollLeft <= 2;
-    next.disabled = workRail.scrollLeft >= workRail.scrollWidth - workRail.clientWidth - 2;
-    if (visible.length) {
-      const first = visible[0].index + 1;
-      const last = visible[visible.length - 1].index + 1;
-      count.textContent = `${first === last ? first : `${first}–${last}`} of ${cards.length}`;
+    if (shown.length) {
+      const first = shown[0].index + 1;
+      const last = shown[shown.length - 1].index + 1;
+      count.textContent = `${first === last ? first : `${first}–${last}`} of ${cards.length} projects · Swipe to explore`;
     }
   }
-  function moveWorkRail(direction) {
+  function moveWorkRail(direction = 1) {
     const card = workRail.firstElementChild;
     if (!card) return;
     const step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(workRail).columnGap);
-    workRail.scrollBy({ left: direction * step, behavior: reducedMotion ? 'instant' : 'smooth' });
+    const end = workRail.scrollWidth - workRail.clientWidth;
+    let target = workRail.scrollLeft + direction * step;
+    if (direction > 0 && workRail.scrollLeft >= end - 2) target = 0;
+    if (direction < 0 && workRail.scrollLeft <= 2) target = end;
+    workRail.scrollTo({ left: target, behavior: motionPreference.matches ? 'instant' : 'smooth' });
   }
-  previous.addEventListener('click', () => moveWorkRail(-1));
-  next.addEventListener('click', () => moveWorkRail(1));
+  function schedule() {
+    clearTimeout(timer);
+    if (!playing || !visible || hovered || touching || document.hidden || workRail.contains(document.activeElement)) return;
+    timer = setTimeout(() => { moveWorkRail(); schedule(); }, 4500);
+  }
+  function updatePlayback() {
+    playback.textContent = playing ? 'Pause rotation' : 'Play rotation';
+    playback.setAttribute('aria-label', playing ? 'Pause automatic project rotation' : 'Start automatic project rotation');
+    schedule();
+  }
+  playback.addEventListener('click', () => { playing = !playing; updatePlayback(); });
+  region.addEventListener('pointerenter', (event) => { if (event.pointerType === 'mouse') { hovered = true; schedule(); } });
+  region.addEventListener('pointerleave', () => { hovered = false; schedule(); });
+  workRail.addEventListener('pointerdown', () => { touching = true; schedule(); });
+  window.addEventListener('pointerup', () => { touching = false; schedule(); });
+  window.addEventListener('pointercancel', () => { touching = false; schedule(); });
+  workRail.addEventListener('focusin', schedule);
+  workRail.addEventListener('focusout', () => setTimeout(schedule, 0));
+  workRail.addEventListener('wheel', schedule, { passive: true });
   workRail.addEventListener('scroll', updateWorkRail, { passive: true });
   workRail.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
@@ -146,6 +172,10 @@ if (workRail) {
       moveWorkRail(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
+  document.addEventListener('visibilitychange', schedule);
+  motionPreference.addEventListener('change', () => { playing = !motionPreference.matches; updatePlayback(); });
+  new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; schedule(); }, { threshold: .25 }).observe(workRail);
   new ResizeObserver(updateWorkRail).observe(workRail);
   updateWorkRail();
+  updatePlayback();
 }

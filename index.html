@@ -73,7 +73,7 @@
         </header>
 
         <div class="work-overview section-pad" role="region" aria-roledescription="carousel" aria-label="Selected projects">
-        <div class="work-controls"><p>Explore the projects <span data-work-count aria-live="polite"></span></p><div><button type="button" data-work-prev aria-label="Previous projects" aria-controls="work-carousel">←</button><button type="button" data-work-next aria-label="Next projects" aria-controls="work-carousel">→</button></div></div>
+        <div class="work-controls"><p>Explore all our projects <span data-work-count></span></p><button type="button" class="work-playback" data-work-playback aria-label="Pause automatic project rotation" aria-controls="work-carousel">Pause rotation</button></div>
         <ul id="work-carousel" class="work-grid" aria-label="Choose a project" data-reveal>
           <li>
             <a class="reel-card reel-card--homeos" href="./projects/homeos.html">
@@ -191,18 +191,20 @@
         </div>
       </section>
 
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact__top section-pad">
-          <p class="section-label" data-reveal><span>05</span> Start something</p>
-          <p class="contact__note" data-reveal>Have a difficult idea, a product that needs clarity, or a system that has outgrown its first version?</p>
+      <section class="contact contact--welcome section-pad" id="contact" aria-labelledby="contact-title">
+        <p class="section-label"><span>05</span> Let’s talk</p>
+        <div class="contact-welcome">
+          <div class="contact-welcome__intro">
+            <h2 id="contact-title">Good things start<br />with <em>a conversation.</em></h2>
+            <p>A new idea, a website that needs a little love, or a task you wish could be simpler. Tell us what you have in mind.</p>
+            <span class="contact-reassurance">No polished brief needed. A simple hello is enough.</span>
+          </div>
+          <div class="contact-options">
+            <a class="contact-option contact-option--primary" href="https://t.me/KAIEVE" target="_blank" rel="noreferrer"><span><small>Drop us a message on Telegram</small><strong>@KAIEVE</strong><span>Let’s hear your idea</span></span><span class="contact-option__arrow" aria-hidden="true">↗</span></a>
+            <a class="contact-option" href="tel:+6592728082"><span><small>Prefer a call?</small><strong>+65 9272 8082</strong></span><span class="contact-option__arrow" aria-hidden="true">↗</span></a>
+            <div class="contact-option contact-option--soon"><span><small>Email</small><strong>Coming soon</strong></span><span class="contact-soon-label">In the meantime, say hi on Telegram</span></div>
+          </div>
         </div>
-        <div class="contact__cta section-pad" data-reveal>
-          <h2 id="contact-title">Let’s make it<br /><em>useful.</em></h2>
-          <a href="https://github.com/moroha29" target="_blank" rel="noreferrer">
-            <span>Find JKM on GitHub</span><i>↗</i>
-          </a>
-        </div>
-        <p class="contact__placeholder section-pad">Direct project email and social links will be added with the founders’ profiles.</p>
       </section>
     </main>
 
