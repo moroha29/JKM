@@ -705,3 +705,14 @@ body.project-page { padding-bottom: 0; }
   .js .project-nav .project-nav__tabs a[aria-current="page"]::after { content: "Viewing"; color: rgba(242,239,230,.7); font-family: var(--mono); font-size: .75rem; }
 }
 @keyframes project-menu-in { from { opacity: 0; transform: translateY(-.4rem); } }
+
+/* Desktop rhythm: one consistent gap between sections, and a tighter label-to-title gap. */
+@media (min-width: 681px) {
+  .why, .people { padding-top: clamp(4rem, 7vw, 7rem); padding-bottom: clamp(4rem, 7vw, 7rem); }
+  .section-head h2, .services__head h2, .why__head h2, .people__head h2, .work > .section-head h2 { margin-top: 3rem; }
+}
+
+/* Founder cards: slightly larger number, name, and role. */
+.person > p { font-size: 1.05rem; }
+.person h3 { margin-bottom: .45rem; font-size: clamp(1.45rem, 2vw, 1.9rem); letter-spacing: -.035em; }
+.person > span { font-size: 1.15rem; }
