@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moroha29.github.io/JKM/sitemap.xml
+Sitemap: https://jkm.digital/sitemap.xml

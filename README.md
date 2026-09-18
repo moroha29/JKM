@@ -1,7 +1,7 @@
 # JKM portfolio
 
 Standalone portfolio for JKM, a three-person Singapore digital studio. It is a
-dependency-free static site deployed at <https://moroha29.github.io/JKM/>.
+dependency-free static site deployed at <https://jkm.digital/>.
 
 ## Featured work
 

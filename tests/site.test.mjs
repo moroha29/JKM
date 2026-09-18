@@ -13,7 +13,7 @@ const [html, css, script, workflow, og] = await Promise.all([
 ]);
 
 assert.match(html, /<meta name="viewport"/);
-assert.match(html, /<meta property="og:image" content="https:\/\/moroha29\.github\.io\/JKM\/assets\/og\.png"/);
+assert.match(html, /<meta property="og:image" content="https:\/\/jkm\.digital\/assets\/og\.png"/);
 assert.match(html, /id="work"/);
 assert.match(html, /id="studio"/);
 assert.match(html, /id="people"/);
