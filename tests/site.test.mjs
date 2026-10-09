@@ -18,7 +18,7 @@ assert.match(html, /id="work"/);
 assert.match(html, /id="studio"/);
 assert.match(html, /id="people"/);
 assert.match(html, /id="contact"/);
-assert.equal((html.match(/class="person"/g) || []).length, 3, "exactly three founder placeholders are required");
+assert.equal((html.match(/class="person"/g) || []).length, 3, "all three founders are present");
 assert.equal((html.match(/<article class="case /g) || []).length, 0, "homepage contains summaries, not full case studies");
 for (const id of ["homeos", "moof", "mysos", "manager"]) {
   const project = await readFile(path.join(root, "projects", `${id}.html`), "utf8");
@@ -39,6 +39,11 @@ assert.equal((css.match(/\{/g) || []).length, (css.match(/\}/g) || []).length, "
 assert.match(css, /prefers-reduced-motion/);
 assert.match(workflow, /npm test/);
 assert.match(workflow, /actions\/deploy-pages@v4/);
+
+const mysos = await readFile(path.join(root, "projects/mysos.html"), "utf8");
+assert.match(mysos, /href="https:\/\/mysourceofsolutions\.com\/"/);
+assert.match(html, /href="https:\/\/mysourceofsolutions\.com\/mock_quotation_engine\/"/);
+assert.doesNotMatch(html + mysos, /href="[^"]*\/quotation_engine\//, "portfolio visitors use only the public demo");
 
 const localAssets = [...html.matchAll(/(?:src|href)="\.\/([^"#?]+)"/g)].map((match) => match[1]);
 await Promise.all([...new Set(localAssets)].map((asset) => access(path.join(root, asset))));

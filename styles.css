@@ -665,6 +665,7 @@ a.contact-option:hover { transform: translateY(-3px); border-color: var(--acid);
 
 /* Project pages: let the decisive move use the full text column with relaxed leading. */
 .case__decision p:last-child { max-width: 62rem; line-height: 1.38; letter-spacing: -.005em; }
+.case__statement + .case__decision { margin-top: 2.5rem; }
 
 /* Project facts: a row of two figures splits the width evenly. */
 @media (min-width: 681px) {
@@ -716,3 +717,72 @@ body.project-page { padding-bottom: 0; }
 .person > p { font-size: 1.05rem; }
 .person h3 { margin-bottom: .45rem; font-size: clamp(1.45rem, 2vw, 1.9rem); letter-spacing: -.035em; }
 .person > span { font-size: 1.15rem; }
+
+/* Local draft: keep the existing palette and layout, with a quieter section rhythm. */
+.section-head h2, .services__head h2, .why__head h2, .people__head h2,
+.work > .section-head h2 {
+  margin-top: 1.35rem;
+  font-size: clamp(2.3rem, 4.2vw, 4.6rem);
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+.why, .people { padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: clamp(3rem, 5vw, 5rem); }
+.services { padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: clamp(3rem, 5vw, 5rem); }
+.work > .section-head { padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 1.75rem; }
+.why__list, .people__grid { margin-top: 2.5rem; }
+
+/* Each cover frames the actual work in a project-specific setting. */
+.work-grid .reel-card__media {
+  padding: 12% 7% 0;
+  aspect-ratio: 16 / 11;
+  background: #dce1ed;
+  border: 0;
+  isolation: isolate;
+}
+.work-grid .reel-card--homeos .reel-card__media { background: #d9def4; color: #293358; }
+.work-grid .reel-card--moof .reel-card__media { background: #d4dac5; color: #38452d; }
+.work-grid .reel-card--mysos .reel-card__media { background: #cbdcd9; color: #234641; }
+.work-grid .reel-card--manager .reel-card__media { background: #e0d8e8; color: #463654; }
+.cover-note { position: absolute; top: 7%; left: 7%; font-family: var(--mono); font-size: clamp(.65rem, 1vw, .85rem); }
+.work-grid .reel-card__media > img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top;
+  border: 1px solid rgba(17,16,13,.12); border-radius: .35rem .35rem 0 0;
+  box-shadow: 0 1rem 2.5rem rgba(17,16,13,.15);
+  transform-origin: center bottom;
+  transition: transform .7s cubic-bezier(.2,.7,.2,1), box-shadow .7s;
+}
+.work-grid .reel-card--manager .reel-card__media > img { object-fit: contain; background: #f4f4f0; object-position: top; }
+.cover-arrow {
+  position: absolute; right: 1rem; bottom: 1rem; display: grid; place-items: center;
+  width: 2.75rem; height: 2.75rem; border-radius: 50%; color: var(--paper); background: var(--ink);
+  font-size: 1.35rem; transition: transform .35s, background .35s, color .35s;
+}
+.work-grid .reel-card:hover .reel-card__media > img,
+.work-grid .reel-card:focus-visible .reel-card__media > img { transform: translateY(-.5rem) scale(1.025); box-shadow: 0 1.5rem 3rem rgba(17,16,13,.22); }
+.reel-card:hover .cover-arrow, .reel-card:focus-visible .cover-arrow { transform: rotate(45deg); background: var(--acid); color: var(--ink); }
+
+/* Reveal related content in sequence, with small movements rather than large effects. */
+.hero__lead h1[data-reveal] { transition-delay: 80ms; }
+.hero__aside[data-reveal] { transition-delay: 180ms; }
+.people__grid .person:nth-child(2) { transition-delay: 90ms; }
+.people__grid .person:nth-child(3) { transition-delay: 180ms; }
+.why__list > li:nth-child(2) { transition-delay: 70ms; }
+.why__list > li:nth-child(3) { transition-delay: 140ms; }
+.why__list > li:nth-child(4) { transition-delay: 210ms; }
+.person { transition: transform .4s; }
+.person__portrait span { transition: transform .65s cubic-bezier(.2,.7,.2,1); }
+.person:hover .person__portrait span { transform: translateY(-.35rem); }
+.floating-nav a { transition: background .25s, color .25s, transform .25s; }
+.floating-nav a:active { transform: scale(.96); }
+@media (max-width: 680px) {
+  .section-head h2, .services__head h2, .why__head h2, .people__head h2, .work > .section-head h2 { margin-top: 1rem; }
+  .why__list, .people__grid { margin-top: 2rem; }
+  .cover-note { font-size: .7rem; }
+  .cover-arrow { width: 2.25rem; height: 2.25rem; right: .65rem; bottom: .65rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-grid .reel-card__media > img, .cover-arrow, .person, .person__portrait span,
+  .floating-nav a, .why__list > li, .hero [data-reveal], .people__grid .person { transition: none; }
+  .work-grid .reel-card:hover .reel-card__media > img,
+  .person:hover .person__portrait span, .reel-card:hover .cover-arrow { transform: none; }
+}
